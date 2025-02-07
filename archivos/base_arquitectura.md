@@ -29,6 +29,6 @@
 ### 5. **Pruebas de Seguridad**
 ### 6. **Pruebas de Usabilidad**
 
-#Repositorio
+# Repositorio
 ## Reglas y estilo de Programación
 ## Evidencias de ceremonias realizadas
