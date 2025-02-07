@@ -1,7 +1,7 @@
 # Tabla de contenidos
 
 ## [Definición del Producto](archivos/definicion_producto.md#definición-del-producto)
-- [Sección 1. Generalidades del proyecto](archivos/archivo/definicion_producto.md#sección-1-generalidades-del-proyecto)
+- [Sección 1. Generalidades del proyecto](archivos/definicion_producto.md#sección-1-generalidades-del-proyecto)
   - [1.1 Descripción del problema y su solución software](archivos/definicion_producto.md#11-descripción-del-problema-y-su-solución-software)
   - [1.2 Personas y roles del proyecto](archivos/definicion_producto.md#12-personas-y-roles-del-proyecto)
   - [1.3 Público objetivo y contexto](archivos/definicion_producto.md#13-público-objetivo-y-contexto)
