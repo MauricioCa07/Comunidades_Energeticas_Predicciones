@@ -24,6 +24,8 @@
 #### **Funcionalidades para el Sprint 1**
 
 ## Sección 5. Prototipos iniciales
-###Link del prototipo:
-###Objetivos del prototipo:
-###**Componentes Principales del Prototipo:**
+### Link del prototipo:
+
+### Objetivos del prototipo:
+
+### **Componentes Principales del Prototipo:**
