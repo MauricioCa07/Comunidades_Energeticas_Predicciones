@@ -1,0 +1,26 @@
+Reglas de programación esenciales: garantizarán consistencia, mantenibilidad y escalabilidad en el código.
+
+
+Generales:
+1. Principio DRY (Don't Repeat Yourself): Evitar la duplicación de código. Si una funcionalidad se repite, crear una función, clase o componente reutilizable.
+2. Principio KISS (Keep It Simple, Stupid): Escribir código simple y fácil de entender. Evitar soluciones innecesariamente complejas.
+3. Principio YAGNI (You Aren't Gonna Need It): No implementar funcionalidades que no son necesarias en un determinado momento. 
+4. Comentarios claros y útiles: Comentar solo lo necesario y asegurarse de que los comentarios expliquen el "por qué" y no el "qué".
+5. Nunca subir código con errores o warnings: Asegurarse de que el código esté limpio y funcione correctamente antes de enviar un pull request.
+6. Uso de nomenclatura con guiones bajos (snake_case).
+
+Para rutas:
+1. Agrupar rutas en un solo archivo.
+2. Usar nombres de rutas descriptivos. Ejemplo: /energy-prediction.
+
+Para testing:
+1. Usar nombres descriptivos en los tests.
+2. Probar casos extremos y errores esperados.
+3. Ejecutar pruebas antes de hacer un pull request.
+
+Para Git y Pull Requests:
+1. Commits descriptivos: feat: agrega predicción de consumo.
+2. Pull Requests con descripción clara.
+3. Ramas por funcionalidad: No trabajar en main directamente.
+4. El arquitecto analizará el pull request y solo aceptará los cambios si los considera pertinentes. 
+
