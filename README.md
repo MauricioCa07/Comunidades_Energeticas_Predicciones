@@ -1,50 +1,8 @@
-# Tabla de contenidos
+# Proyecto P2
 
-## [Definición del Producto](archivos/definicion_producto.md#definición-del-producto)
-- [Sección 1. Generalidades del proyecto](archivos/definicion_producto.md#sección-1-generalidades-del-proyecto)
-  - [1.1 Descripción del problema y su solución software](archivos/definicion_producto.md#11-descripción-del-problema-y-su-solución-software)
-  - [1.2 Personas y roles del proyecto](archivos/definicion_producto.md#12-personas-y-roles-del-proyecto)
-  - [1.3 Público objetivo y contexto](archivos/definicion_producto.md#13-público-objetivo-y-contexto)
-    - [Diagrama de contexto](archivos/definicion_producto.md#diagrama-de-contexto)
-  - [1.4 Descripción del proceso de interacción](archivos/definicion_producto.md#14-descripción-del-proceso-de-interacción)
-  - [1.5 Glosario de términos](archivos/definicion_producto.md#15-glosario-de-términos)
-    - [Glosario de Términos](archivos/definicion_producto.md#glosario-de-términos)
-- [Sección 2. Determinación de necesidades](archivos/definicion_producto.md#sección-2-determinación-de-necesidades)
-  - [2.2 Exploración de antecedentes y aplicaciones similares](archivos/definicion_producto.md#22-exploración-de-antecedentes-y-aplicaciones-similares)
-- [Sección 3. User story mapping y backlog del producto](archivos/definicion_producto.md#sección-3-user-story-mapping-y-backlog-del-producto)
-  - [3.1 Story mapping](archivos/definicion_producto.md#31-story-mapping)
-  - [3.2 Backlog del producto](archivos/definicion_producto.md#32-backlog-del-producto)
-    - [Historias de Usuario - Requisitos Funcionales](archivos/definicion_producto.md#historias-de-usuario---requisitos-funcionales)
-    - [Historias de Usuario - Requisitos No Funcionales](archivos/definicion_producto.md#historias-de-usuario---requisitos-no-funcionales)
-- [Sección 4. Sprint Backlog](archivos/definicion_producto.md#sección-4-sprint-backlog)
-    - [Funcionalidades para el Sprint 1](archivos/definicion_producto.md#funcionalidades-para-el-sprint-1)
-- [Sección 5. Prototipos iniciales](archivos/definicion_producto.md#sección-5-prototipos-iniciales)
-  - [Link del prototipo](archivos/definicion_producto.md#link-del-prototipo)
-  - [Objetivos del prototipo](archivos/definicion_producto.md#objetivos-del-prototipo)
-  - [Componentes Principales del Prototipo](archivos/definicion_producto.md#componentes-principales-del-prototipo)
 
-## [Base de Arquitectura](archivos/base_arquitectura.md#base-de-arquitectura)
-- [1. Alcance](archivos/base_arquitectura.md#1-alcance)
-- [2. Descripción de los componentes](archivos/base_arquitectura.md#2-descripción-de-los-componentes)
-- [3. Dimensión del sistema](archivos/base_arquitectura.md#3-dimensión-del-sistema)
-- [4. Requisitos no funcionales](archivos/base_arquitectura.md#4-requisitos-no-funcionales)
-- [5. Diagrama de clases](archivos/base_arquitectura.md#5-diagrama-de-clases)
-- [6. Diagrama de componentes del sistema](archivos/base_arquitectura.md#6-diagrama-de-componentes-del-sistema)
-  - [Diagrama de la arquitectura](archivos/base_arquitectura.md#diagrama-de-la-arquitectura)
-
-## [Plantilla sugerida](archivos/base_arquitectura.md#plantilla-sugerida)
-- [Equipo de trabajo](archivos/base_arquitectura.md#equipo-de-trabajo)
-- [Alcance](archivos/base_arquitectura.md#alcance)
-- [Estrategia](archivos/base_arquitectura.md#estrategia)
-- [Recursos y costos](archivos/base_arquitectura.md#recursos-y-costos)
-- [Tipos de pruebas y técnicas](archivos/base_arquitectura.md#tipos-de-pruebas-y-técnicas)
-  - [1. Pruebas Unitarias](archivos/base_arquitectura.md#1-pruebas-unitarias)
-  - [2. Pruebas de Integración](archivos/base_arquitectura.md#2-pruebas-de-integración)
-  - [3. Pruebas Funcionales](archivos/base_arquitectura.md#3-pruebas-funcionales)
-  - [4. Pruebas de Carga (archivos/Load Testing)](base_arquitectura.md#4-pruebas-de-carga-load-testing)
-  - [5. Pruebas de Seguridad](archivos/base_arquitectura.md#5-pruebas-de-seguridad)
-  - [6. Pruebas de Usabilidad](archivos/base_arquitectura.md#6-pruebas-de-usabilidad)
-
-## [Repositorio](archivos/base_arquitectura.md#repositorio)
-- [Reglas y estilo de Programación](archivos/base_arquitectura.md#reglas-y-estilo-de-programación)
-- [Evidencias de ceremonias realizadas](archivos/base_arquitectura.md#evidencias-de-ceremonias-realizadas)
+## Configuración
+1. Clonar el repositorio
+2. Crear un entorno virtual: `python 3.11 -m venv env`
+3. Activar el entorno virtual
+4. Instalar dependencias: `pip install -r requirements.txt`
