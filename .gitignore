@@ -1,17 +1,2 @@
-# Ignorar el entorno virtual
-venv/
-env/
-lib/
-bin/
-pyvenv.cfg
-
-# Ignorar cachés de Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-
-models_media/
-past_models/
+models_media/datasets
 *.keras
