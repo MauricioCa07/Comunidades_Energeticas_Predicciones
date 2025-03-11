@@ -15,9 +15,8 @@
   el nombre del modelo actual que se tenga 
 
 
-# Para iniciar el servidor 
+## Para iniciar el servidor 
 
-´´´
+```
 python -m flask --app proyecto_p2/src/board run --port 8000 --debug
-
-´´´
+```
