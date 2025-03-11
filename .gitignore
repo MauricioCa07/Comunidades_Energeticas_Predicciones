@@ -1,2 +1,5 @@
-models_media/datasets
+models_media/datasets/
+models_media/processed_datasets/
+past_models/
 *.keras
+

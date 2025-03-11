@@ -1,23 +1,29 @@
-from flask import Flask, request, jsonify
+from flask import Blueprint,Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
 import numpy as np
 
-app = Flask(__name__)
+
+
+bp = Blueprint("modules", __name__)
+
+@bp.route("/")
+def home():
+    return render_template("home.html")
+
 
 # ==========================
 # All the models should be here 
 # ==========================
 MODELS = {
-    'com': load_model("./finalModel.keras")
+    'com': load_model("/home/laptop1/Desktop/codes/proyecto_p2/COM-2.0.keras")
     }
-
 
 # ==========================
 # This a the route that are 
 # going to be executed for 
 # each prediction
 # ==========================
-@app.route('/predict/<model_name>', methods=['POST'])
+@bp.route('/predict/<model_name>', methods=['POST'])
 def predict(model_name):
     try:
 
@@ -37,14 +43,3 @@ def predict(model_name):
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-
-
-def train_model_manually():pass
-
-
-
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
