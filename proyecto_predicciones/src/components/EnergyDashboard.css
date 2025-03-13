@@ -1,0 +1,499 @@
+
+:root {
+    --primary-color: #e05504;
+    --secondary-color: #ffecd1;
+    --text-color: #333;
+    --border-radius: 20px;
+    --positive-color: #4caf50;
+    --negative-color: #4caf50; /* Cambiado de #f44336 a #4caf50 para que todo sea positivo */
+    --neutral-color: #757575;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 80px; /* Espacio para la barra de navegación */
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Cabecera con círculos decorativos */
+.header-decoration {
+    background-color: var(--secondary-color);
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-title {
+    text-align: center;
+    z-index: 5;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-title h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.dashboard-title p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.circle {
+    position: absolute;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    left: 180px;
+    opacity: 0.9;
+}
+
+.circle-3 {
+    width: 220px;
+    height: 220px;
+    top: -70px;
+    right: -40px;
+}
+
+/* Sistema de pestañas */
+.tabs-container {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+}
+
+.tab:hover {
+    background-color: #f5f5f5;
+}
+
+.tab.active {
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Secciones de información */
+.info-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.info-section.highlight {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.info-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.info-section.highlight h3 {
+    color: white;
+}
+
+/* Gráfica */
+.chart-container {
+    margin: 20px 0;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Custom tooltip for recharts */
+.custom-tooltip {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.tooltip-time {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Cajas de estadísticas */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-box {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-4px);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444;
+    margin: 10px 0;
+}
+
+.stat-value.positive {
+    color: var(--positive-color);
+}
+
+.stat-value.negative {
+    color: var(--positive-color); /* Cambiado de negative-color a positive-color */
+}
+
+.stat-value.neutral {
+    color: var(--neutral-color);
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Bloques de tiempo */
+.time-blocks-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.time-block {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.time-block:hover {
+    transform: scale(1.02);
+}
+
+.time-block-header {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.time-block-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.time-block-metric {
+    flex: 1;
+    min-width: 120px;
+}
+
+.metric-label {
+    display: block;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.metric-value {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.time-block-diff {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.time-block-diff.positive {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--positive-color);
+}
+
+.time-block-diff.negative {
+    background-color: rgba(76, 175, 80, 0.1); /* Cambiado de rojo a verde */
+    color: var(--positive-color); /* Cambiado de negative-color a positive-color */
+}
+
+.time-block-diff.neutral {
+    background-color: rgba(117, 117, 117, 0.1);
+    color: var(--neutral-color);
+}
+
+/* Resumen de eficiencia */
+.efficiency-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.efficiency-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.efficiency-metric:last-child {
+    border-bottom: none;
+}
+
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 8px 0;
+    border-radius: 8px;
+    width: 80px;
+}
+
+.nav-icon {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.nav-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+    background-color: rgba(224, 85, 4, 0.1);
+}
+
+/* Pantalla de carga */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--secondary-color);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .stats-container {
+        flex-direction: row;
+    }
+    
+    .stat-box {
+        flex: 1;
+    }
+
+    .time-blocks-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .efficiency-summary {
+        padding: 0 10%;
+    }
+}
+
+@media (min-width: 992px) {
+    .time-blocks-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.data-table {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-table h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #f4f4f4;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.neutral {
+    color: gray;
+}
+
+/* Estilos para tablas de predicción */
+.prediction-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .prediction-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .prediction-table th,
+  .prediction-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+  }
+  
+  .prediction-table th {
+    background-color: #f5f7fa;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .prediction-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .prediction-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .prediction-table .positive {
+    color: #4caf50;
+  }
+  
+  .prediction-table .negative {
+    color: #ffffff;
+  }
+  
+  .prediction-table .neutral {
+    color: #607d8b;
+  }
+
+/* Estilos para el botón de Home */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+    /* Alineación vertical con el navbar */
+    top: 9%;
+    transform: translateY(-50%);
+  }
+  
+  .home-button:hover {
+    background-color: #3a7bca;
+    transform: translateY(-50%) scale(1.50);
+  }
+  
+  .home-button svg {
+    width: 28px;
+    height: 28px;
+  }
