@@ -7,7 +7,7 @@
 3. Activar el entorno virtual
 4. Instalar dependencias: `pip install -r requirements.txt`
 
-> Debes tener en cuanta que en la primera ejecucion deberas generar el dataset
+> Debes tener en cuenta que en la primera ejecucion deberas generar el dataset
 
 
 ## Si quieres reentrenar el modelo manulmente
