@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomeDashboard />} />
-        <Route path="/com" element={<EnergyDashboard />} />
+        <Route path="/consumption" element={<EnergyDashboard />} />
         <Route path="/weather" element={<WeatherDashboard />} />
       </Routes>
     </Router>

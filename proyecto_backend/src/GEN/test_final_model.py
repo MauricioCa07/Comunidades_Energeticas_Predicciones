@@ -1,6 +1,6 @@
 import os
 import json
-import numpy as np
+import numpy as np #./run_app
 import pandas as pd
 import pickle
 from tensorflow.keras.models import load_model
@@ -86,35 +86,138 @@ def get_historical_prediction(date, historical_means):
                 return historical_means[potential_key]
         return None
 
-def predict_full_day_hybrid(df_sample):
+def predict_full_day_hybrid_extended(df_sample, total_steps=288): 
     """
-    Genera predicciones para el próximo día completo usando tanto el modelo LSTM
-    como el modelo histórico, combinados con un factor alpha.
+    Genera predicciones para el número total de pasos especificado.
+    Usa LSTM para los primeros 'forecast_horizon' pasos.
+    Usa promedios históricos para el resto.
     """
     now = datetime.now()
-    minute = now.minute
-    remainder = minute % 5
-    offset = 5 - remainder if remainder != 0 else 0
-    start_time = now + timedelta(minutes=offset)
-    start_time = start_time.replace(second=0, microsecond=0)
+    # Calcula el inicio del próximo intervalo de 5 minutos
+    start_time = now.replace(minute=(now.minute // 5) * 5, second=0, microsecond=0) + timedelta(minutes=5)
     
-    last_data = df_sample.iloc[-window_size:]
+    # Asegúrate de tener suficientes datos en df_sample
+    if len(df_sample) < window_size:
+         print(f"Advertencia: Se necesitan {window_size} puntos de datos, pero solo hay {len(df_sample)}. Usando los disponibles.")
+         # Podrías decidir devolver None o intentar continuar si tienes al menos algunos datos
+         # return None 
     
+    last_data = df_sample.iloc[-window_size:] # Usar los últimos datos disponibles
+    
+    all_predictions = []
+    # Inicializa last_valid_timestamp al último tiempo real conocido antes de la predicción
+    last_valid_timestamp = last_data.index[-1] if not last_data.empty else start_time - timedelta(minutes=5) 
+
+    # 1. Intenta la predicción LSTM para los primeros 'forecast_horizon' pasos
     try:
         lstm_predictions_df = predict_next_day(model, last_data, scaler_X, scaler_y)
-        alpha = 0.7
-        for timestamp in lstm_predictions_df.index:
-            hist_pred = get_historical_prediction(timestamp, historical_daily_means)
-            if hist_pred is not None:
-                for var in target_vars:
-                    lstm_val = lstm_predictions_df.loc[timestamp, var]
-                    hist_val = hist_pred.get(var, lstm_val)
-                    combined_val = alpha * lstm_val + (1 - alpha) * hist_val
-                    lstm_predictions_df.loc[timestamp, var] = combined_val
-        return lstm_predictions_df
+        
+        # Verifica y corrige el índice si es necesario
+        if not isinstance(lstm_predictions_df.index, pd.DatetimeIndex):
+            print("Advertencia: El índice de predicción LSTM no es DatetimeIndex. Reconstruyendo fechas.")
+            lstm_dates = [last_valid_timestamp + timedelta(minutes=5*(i+1)) for i in range(len(lstm_predictions_df))] # Usa len() para seguridad
+            lstm_predictions_df.index = pd.to_datetime(lstm_dates)
+        
+        # Asegúrate de que realmente tienes predicciones LSTM
+        if not lstm_predictions_df.empty:
+             all_predictions.append(lstm_predictions_df)
+             # Actualiza el último timestamp conocido al final de la predicción LSTM exitosa
+             last_valid_timestamp = lstm_predictions_df.index[-1] 
+        else:
+             print("Advertencia: La predicción LSTM devolvió un DataFrame vacío.")
+             # Mantenemos el last_valid_timestamp original
+
+    # --- Bloque except corregido ---
     except Exception as e:
-        print(f"Error al generar predicciones: {e}")
-        return None
+        print(f"Error en la predicción LSTM inicial: {e}. Se usarán solo históricos desde el último dato real.")
+        # Si falla el LSTM, 'last_valid_timestamp' se mantiene como el último dato real conocido
+
+    # 2. Calcula cuántos pasos faltan por rellenar
+    steps_predicted_lstm = len(all_predictions[0]) if all_predictions else 0
+    remaining_steps = total_steps - steps_predicted_lstm
+
+    # 3. Rellenar los pasos restantes con promedios históricos
+    historical_data = []
+    current_timestamp = last_valid_timestamp # Empezar desde el último timestamp válido (sea real o LSTM)
+
+    if remaining_steps > 0:
+        print(f"Rellenando {remaining_steps} pasos con datos históricos...")
+        for i in range(remaining_steps):
+            current_timestamp += timedelta(minutes=5)
+            hist_pred_dict = get_historical_prediction(current_timestamp, historical_daily_means)
+            current_minute = current_timestamp.minute
+
+            # Obtener promedio para la hora actual
+            hist_pred_curr_hour_dict = get_historical_prediction(current_timestamp, historical_daily_means)
+
+            # Obtener promedio para la SIGUIENTE hora
+            next_hour_timestamp = current_timestamp + timedelta(hours=1)
+            hist_pred_next_hour_dict = get_historical_prediction(next_hour_timestamp, historical_daily_means)
+
+            interpolated_pred_dict = {}
+            if hist_pred_curr_hour_dict:
+                # Si no hay datos de la siguiente hora, usa solo los de la actual
+                if not hist_pred_next_hour_dict:
+                    hist_pred_next_hour_dict = hist_pred_curr_hour_dict 
+
+                # Interpolar cada variable
+                for var in target_vars:
+                    val_curr = hist_pred_curr_hour_dict.get(var, 0) # Default a 0 si falta
+                    val_next = hist_pred_next_hour_dict.get(var, val_curr) # Default al valor actual si falta el siguiente
+                    
+                    # Fracción de la hora (0.0 a casi 1.0)
+                    minute_fraction = current_minute / 60.0 
+                    
+                    # Interpolación lineal
+                    interpolated_value = val_curr + (val_next - val_curr) * minute_fraction
+                    interpolated_pred_dict[var] = interpolated_value
+
+                # Añadir a la lista
+                row_data = interpolated_pred_dict
+                row_data['timestamp'] = current_timestamp
+                historical_data.append(row_data)
+
+            else: # Fallback si ni siquiera hay datos para la hora actual
+                print(f"Advertencia: No se encontró promedio histórico para {current_timestamp}. Usando fallback (ceros).")
+                fallback_values = {var: 0 for var in target_vars} # Podrías usar el último valor conocido si lo rastreas
+                fallback_values['timestamp'] = current_timestamp
+                historical_data.append(fallback_values)
+    
+    # Convierte los datos históricos a DataFrame si existen
+    if historical_data:
+         historical_df = pd.DataFrame(historical_data)
+         historical_df.set_index('timestamp', inplace=True)
+         # Asegura que las columnas estén en el orden correcto
+         historical_df = historical_df.reindex(columns=target_vars) 
+         all_predictions.append(historical_df)
+
+    # 4. Combinar los DataFrames
+    if not all_predictions:
+         print("Error: No se pudieron generar predicciones (ni LSTM ni históricas).")
+         return None
+    
+    final_predictions_df = pd.concat(all_predictions)
+    
+    # Asegurar que solo tenemos 'total_steps' (por si hubo errores o solapamiento)
+    # Ordenar por índice por si acaso la concatenación desordenó algo
+    final_predictions_df = final_predictions_df.sort_index() 
+    # Tomar solo los primeros total_steps desde el inicio esperado
+    start_prediction_time = (last_data.index[-1] if not last_data.empty else start_time - timedelta(minutes=5)) + timedelta(minutes=5)
+    end_prediction_time = start_prediction_time + timedelta(minutes=5*(total_steps - 1))
+    
+    # Filtra para asegurar el rango exacto y elimina duplicados si los hubiera
+    final_predictions_df = final_predictions_df[~final_predictions_df.index.duplicated(keep='first')]
+    final_predictions_df = final_predictions_df.loc[start_prediction_time:end_prediction_time]
+    
+    # Si aún así hay más de total_steps (raro), trunca
+    if len(final_predictions_df) > total_steps:
+        final_predictions_df = final_predictions_df.iloc[:total_steps]
+    elif len(final_predictions_df) < total_steps:
+         print(f"Advertencia: Se generaron solo {len(final_predictions_df)} de {total_steps} pasos.")
+
+
+    return final_predictions_df
+        
 
 # -------------------------
 # Evaluación del modelo con datos de prueba
@@ -155,7 +258,7 @@ for i, var in enumerate(target_vars):
     print(f"  R² = {r2:.4f}")
 
 # Generar predicción híbrida para el próximo día
-predictions_df = predict_full_day_hybrid(df_last)
+predictions_df = predict_full_day_hybrid_extended(df_last, total_steps=288)
 if predictions_df is not None:
     print("Predicción híbrida generada:")
     print(predictions_df)

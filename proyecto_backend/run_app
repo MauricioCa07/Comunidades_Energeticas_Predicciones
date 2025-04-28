@@ -1,0 +1,3 @@
+#! /bin/bash
+
+python3.11 -m flask --app src/board run --host=0.0.0.0 --port=8000 --debug

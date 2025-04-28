@@ -1,0 +1,2627 @@
+{
+    "model": "weather-1.0.keras",
+    "metrics": {
+        "air_temp": {
+            "MAE": 0.3083730164374173,
+            "R\u00b2": 0.9877751438562011
+        },
+        "ghi": {
+            "MAE": 25.74442715166897,
+            "R\u00b2": 0.9820059008626811
+        },
+        "precipitable_water": {
+            "MAE": 0.26876718608559724,
+            "R\u00b2": 0.9914568312517302
+        },
+        "precipitation_rate": {
+            "MAE": 0.07265712974894455,
+            "R\u00b2": 0.8947271910725414
+        },
+        "relative_humidity": {
+            "MAE": 0.8020358692732554,
+            "R\u00b2": 0.9949779448578095
+        },
+        "wind_direction_10m": {
+            "MAE": 5.848841269124673,
+            "R\u00b2": 0.9139378111943852
+        },
+        "wind_speed_10m": {
+            "MAE": 0.05006175149747673,
+            "R\u00b2": 0.9738727976442683
+        }
+    },
+    "predictions": {
+        "2025-02-03 00:05:00+00:00": {
+            "air_temp": 16.364233016967773,
+            "ghi": 17.36719512939453,
+            "precipitable_water": 29.886577606201172,
+            "precipitation_rate": 0.21670542657375336,
+            "relative_humidity": 90.41349792480469,
+            "wind_direction_10m": 66.60598754882812,
+            "wind_speed_10m": 1.440200686454773
+        },
+        "2025-02-03 00:10:00+00:00": {
+            "air_temp": 16.33677101135254,
+            "ghi": 18.577552795410156,
+            "precipitable_water": 29.87230110168457,
+            "precipitation_rate": 0.23049932718276978,
+            "relative_humidity": 90.46910858154297,
+            "wind_direction_10m": 67.21746063232422,
+            "wind_speed_10m": 1.4374346733093262
+        },
+        "2025-02-03 00:15:00+00:00": {
+            "air_temp": 16.30223274230957,
+            "ghi": 20.31359100341797,
+            "precipitable_water": 29.860355377197266,
+            "precipitation_rate": 0.24516421556472778,
+            "relative_humidity": 90.51214599609375,
+            "wind_direction_10m": 67.11387634277344,
+            "wind_speed_10m": 1.4347604513168335
+        },
+        "2025-02-03 00:20:00+00:00": {
+            "air_temp": 16.280147552490234,
+            "ghi": 22.90721893310547,
+            "precipitable_water": 29.845808029174805,
+            "precipitation_rate": 0.24843931198120117,
+            "relative_humidity": 90.55750274658203,
+            "wind_direction_10m": 67.31181335449219,
+            "wind_speed_10m": 1.4302111864089966
+        },
+        "2025-02-03 00:25:00+00:00": {
+            "air_temp": 19.531241328686416,
+            "ghi": 0.0,
+            "precipitable_water": 25.56641152060421,
+            "precipitation_rate": 0.15391385850492256,
+            "relative_humidity": 76.95786472084271,
+            "wind_direction_10m": 101.39789942801617,
+            "wind_speed_10m": 0.7309090845686976
+        },
+        "2025-02-03 00:30:00+00:00": {
+            "air_temp": 19.441292862738955,
+            "ghi": 0.0,
+            "precipitable_water": 25.600429084318968,
+            "precipitation_rate": 0.15058154999807727,
+            "relative_humidity": 77.32168633170087,
+            "wind_direction_10m": 101.70890855673292,
+            "wind_speed_10m": 0.733914717119426
+        },
+        "2025-02-03 00:35:00+00:00": {
+            "air_temp": 19.35134439679149,
+            "ghi": 0.0,
+            "precipitable_water": 25.634446648033723,
+            "precipitation_rate": 0.147249241491232,
+            "relative_humidity": 77.68550794255903,
+            "wind_direction_10m": 102.01991768544966,
+            "wind_speed_10m": 0.7369203496701544
+        },
+        "2025-02-03 00:40:00+00:00": {
+            "air_temp": 19.261395930844024,
+            "ghi": 0.0,
+            "precipitable_water": 25.66846421174848,
+            "precipitation_rate": 0.1439169329843867,
+            "relative_humidity": 78.04932955341718,
+            "wind_direction_10m": 102.33092681416639,
+            "wind_speed_10m": 0.7399259822208829
+        },
+        "2025-02-03 00:45:00+00:00": {
+            "air_temp": 19.17144746489656,
+            "ghi": 0.0,
+            "precipitable_water": 25.702481775463234,
+            "precipitation_rate": 0.14058462447754144,
+            "relative_humidity": 78.41315116427533,
+            "wind_direction_10m": 102.64193594288312,
+            "wind_speed_10m": 0.7429316147716113
+        },
+        "2025-02-03 00:50:00+00:00": {
+            "air_temp": 19.081498998949094,
+            "ghi": 0.0,
+            "precipitable_water": 25.73649933917799,
+            "precipitation_rate": 0.13725231597069615,
+            "relative_humidity": 78.77697277513349,
+            "wind_direction_10m": 102.95294507159986,
+            "wind_speed_10m": 0.7459372473223397
+        },
+        "2025-02-03 00:55:00+00:00": {
+            "air_temp": 18.99155053300163,
+            "ghi": 0.0,
+            "precipitable_water": 25.770516902892744,
+            "precipitation_rate": 0.13392000746385088,
+            "relative_humidity": 79.14079438599164,
+            "wind_direction_10m": 103.26395420031659,
+            "wind_speed_10m": 0.7489428798730682
+        },
+        "2025-02-03 01:00:00+00:00": {
+            "air_temp": 18.901602067054164,
+            "ghi": 0.0,
+            "precipitable_water": 25.8045344666075,
+            "precipitation_rate": 0.1305876989570056,
+            "relative_humidity": 79.5046159968498,
+            "wind_direction_10m": 103.57496332903332,
+            "wind_speed_10m": 0.7519485124237966
+        },
+        "2025-02-03 01:05:00+00:00": {
+            "air_temp": 18.810942959912765,
+            "ghi": 0.0,
+            "precipitable_water": 25.83694460839076,
+            "precipitation_rate": 0.13368104330227257,
+            "relative_humidity": 79.83757557657394,
+            "wind_direction_10m": 103.95000846291877,
+            "wind_speed_10m": 0.7591717605527013
+        },
+        "2025-02-03 01:10:00+00:00": {
+            "air_temp": 18.72028385277137,
+            "ghi": 0.0,
+            "precipitable_water": 25.86935475017402,
+            "precipitation_rate": 0.13677438764753955,
+            "relative_humidity": 80.17053515629809,
+            "wind_direction_10m": 104.32505359680421,
+            "wind_speed_10m": 0.766395008681606
+        },
+        "2025-02-03 01:15:00+00:00": {
+            "air_temp": 18.629624745629975,
+            "ghi": 0.0,
+            "precipitable_water": 25.901764891957278,
+            "precipitation_rate": 0.13986773199280653,
+            "relative_humidity": 80.50349473602225,
+            "wind_direction_10m": 104.70009873068966,
+            "wind_speed_10m": 0.7736182568105108
+        },
+        "2025-02-03 01:20:00+00:00": {
+            "air_temp": 18.538965638488577,
+            "ghi": 0.0,
+            "precipitable_water": 25.934175033740534,
+            "precipitation_rate": 0.1429610763380735,
+            "relative_humidity": 80.8364543157464,
+            "wind_direction_10m": 105.0751438645751,
+            "wind_speed_10m": 0.7808415049394155
+        },
+        "2025-02-03 01:25:00+00:00": {
+            "air_temp": 18.44830653134718,
+            "ghi": 0.0,
+            "precipitable_water": 25.966585175523793,
+            "precipitation_rate": 0.14605442068334049,
+            "relative_humidity": 81.16941389547054,
+            "wind_direction_10m": 105.45018899846055,
+            "wind_speed_10m": 0.7880647530683202
+        },
+        "2025-02-03 01:30:00+00:00": {
+            "air_temp": 18.357647424205783,
+            "ghi": 0.0,
+            "precipitable_water": 25.998995317307052,
+            "precipitation_rate": 0.14914776502860744,
+            "relative_humidity": 81.5023734751947,
+            "wind_direction_10m": 105.825234132346,
+            "wind_speed_10m": 0.795288001197225
+        },
+        "2025-02-03 01:35:00+00:00": {
+            "air_temp": 18.26698831706439,
+            "ghi": 0.0,
+            "precipitable_water": 26.031405459090312,
+            "precipitation_rate": 0.15224110937387442,
+            "relative_humidity": 81.83533305491885,
+            "wind_direction_10m": 106.20027926623143,
+            "wind_speed_10m": 0.8025112493261297
+        },
+        "2025-02-03 01:40:00+00:00": {
+            "air_temp": 18.17632920992299,
+            "ghi": 0.0,
+            "precipitable_water": 26.06381560087357,
+            "precipitation_rate": 0.1553344537191414,
+            "relative_humidity": 82.168292634643,
+            "wind_direction_10m": 106.57532440011688,
+            "wind_speed_10m": 0.8097344974550345
+        },
+        "2025-02-03 01:45:00+00:00": {
+            "air_temp": 18.08567010278159,
+            "ghi": 0.0,
+            "precipitable_water": 26.096225742656827,
+            "precipitation_rate": 0.15842779806440838,
+            "relative_humidity": 82.50125221436714,
+            "wind_direction_10m": 106.95036953400232,
+            "wind_speed_10m": 0.8169577455839392
+        },
+        "2025-02-03 01:50:00+00:00": {
+            "air_temp": 17.995010995640197,
+            "ghi": 0.0,
+            "precipitable_water": 26.128635884440087,
+            "precipitation_rate": 0.16152114240967536,
+            "relative_humidity": 82.83421179409129,
+            "wind_direction_10m": 107.32541466788777,
+            "wind_speed_10m": 0.8241809937128439
+        },
+        "2025-02-03 01:55:00+00:00": {
+            "air_temp": 17.9043518884988,
+            "ghi": 0.0,
+            "precipitable_water": 26.161046026223346,
+            "precipitation_rate": 0.16461448675494234,
+            "relative_humidity": 83.16717137381545,
+            "wind_direction_10m": 107.7004598017732,
+            "wind_speed_10m": 0.8314042418417487
+        },
+        "2025-02-03 02:00:00+00:00": {
+            "air_temp": 17.813692781357403,
+            "ghi": 0.0,
+            "precipitable_water": 26.193456168006605,
+            "precipitation_rate": 0.16770783110020931,
+            "relative_humidity": 83.5001309535396,
+            "wind_direction_10m": 108.07550493565866,
+            "wind_speed_10m": 0.8386274899706534
+        },
+        "2025-02-03 02:05:00+00:00": {
+            "air_temp": 17.746218237594217,
+            "ghi": 0.0,
+            "precipitable_water": 26.21339672660663,
+            "precipitation_rate": 0.17305549884967494,
+            "relative_humidity": 83.70960464242195,
+            "wind_direction_10m": 106.81476878982122,
+            "wind_speed_10m": 0.8334288268919298
+        },
+        "2025-02-03 02:10:00+00:00": {
+            "air_temp": 17.67874369383103,
+            "ghi": 0.0,
+            "precipitable_water": 26.233337285206648,
+            "precipitation_rate": 0.17840316659914054,
+            "relative_humidity": 83.91907833130432,
+            "wind_direction_10m": 105.55403264398377,
+            "wind_speed_10m": 0.8282301638132061
+        },
+        "2025-02-03 02:15:00+00:00": {
+            "air_temp": 17.611269150067844,
+            "ghi": 0.0,
+            "precipitable_water": 26.25327784380667,
+            "precipitation_rate": 0.18375083434860617,
+            "relative_humidity": 84.12855202018667,
+            "wind_direction_10m": 104.29329649814633,
+            "wind_speed_10m": 0.8230315007344825
+        },
+        "2025-02-03 02:20:00+00:00": {
+            "air_temp": 17.543794606304658,
+            "ghi": 0.0,
+            "precipitable_water": 26.27321840240669,
+            "precipitation_rate": 0.1890985020980718,
+            "relative_humidity": 84.33802570906903,
+            "wind_direction_10m": 103.03256035230889,
+            "wind_speed_10m": 0.8178328376557589
+        },
+        "2025-02-03 02:25:00+00:00": {
+            "air_temp": 17.476320062541472,
+            "ghi": 0.0,
+            "precipitable_water": 26.293158961006714,
+            "precipitation_rate": 0.1944461698475374,
+            "relative_humidity": 84.54749939795138,
+            "wind_direction_10m": 101.77182420647145,
+            "wind_speed_10m": 0.8126341745770352
+        },
+        "2025-02-03 02:30:00+00:00": {
+            "air_temp": 17.408845518778286,
+            "ghi": 0.0,
+            "precipitable_water": 26.313099519606737,
+            "precipitation_rate": 0.19979383759700303,
+            "relative_humidity": 84.75697308683374,
+            "wind_direction_10m": 100.511088060634,
+            "wind_speed_10m": 0.8074355114983116
+        },
+        "2025-02-03 02:35:00+00:00": {
+            "air_temp": 17.341370975015103,
+            "ghi": 0.0,
+            "precipitable_water": 26.333040078206757,
+            "precipitation_rate": 0.20514150534646866,
+            "relative_humidity": 84.96644677571611,
+            "wind_direction_10m": 99.25035191479655,
+            "wind_speed_10m": 0.802236848419588
+        },
+        "2025-02-03 02:40:00+00:00": {
+            "air_temp": 17.273896431251917,
+            "ghi": 0.0,
+            "precipitable_water": 26.35298063680678,
+            "precipitation_rate": 0.21048917309593426,
+            "relative_humidity": 85.17592046459846,
+            "wind_direction_10m": 97.98961576895911,
+            "wind_speed_10m": 0.7970381853408643
+        },
+        "2025-02-03 02:45:00+00:00": {
+            "air_temp": 17.20642188748873,
+            "ghi": 0.0,
+            "precipitable_water": 26.3729211954068,
+            "precipitation_rate": 0.2158368408453999,
+            "relative_humidity": 85.38539415348082,
+            "wind_direction_10m": 96.72887962312167,
+            "wind_speed_10m": 0.7918395222621407
+        },
+        "2025-02-03 02:50:00+00:00": {
+            "air_temp": 17.138947343725544,
+            "ghi": 0.0,
+            "precipitable_water": 26.392861754006823,
+            "precipitation_rate": 0.22118450859486552,
+            "relative_humidity": 85.59486784236319,
+            "wind_direction_10m": 95.46814347728423,
+            "wind_speed_10m": 0.7866408591834171
+        },
+        "2025-02-03 02:55:00+00:00": {
+            "air_temp": 17.071472799962358,
+            "ghi": 0.0,
+            "precipitable_water": 26.412802312606843,
+            "precipitation_rate": 0.22653217634433112,
+            "relative_humidity": 85.80434153124554,
+            "wind_direction_10m": 94.20740733144679,
+            "wind_speed_10m": 0.7814421961046935
+        },
+        "2025-02-03 03:00:00+00:00": {
+            "air_temp": 17.00399825619917,
+            "ghi": 0.0,
+            "precipitable_water": 26.432742871206866,
+            "precipitation_rate": 0.23187984409379675,
+            "relative_humidity": 86.0138152201279,
+            "wind_direction_10m": 92.94667118560935,
+            "wind_speed_10m": 0.7762435330259698
+        },
+        "2025-02-03 03:05:00+00:00": {
+            "air_temp": 16.945738332161707,
+            "ghi": 0.0,
+            "precipitable_water": 26.444480428941848,
+            "precipitation_rate": 0.22608638276987708,
+            "relative_humidity": 86.2741048873628,
+            "wind_direction_10m": 93.13383801900007,
+            "wind_speed_10m": 0.7742958688682714
+        },
+        "2025-02-03 03:10:00+00:00": {
+            "air_temp": 16.887478408124245,
+            "ghi": 0.0,
+            "precipitable_water": 26.456217986676833,
+            "precipitation_rate": 0.22029292144595738,
+            "relative_humidity": 86.53439455459768,
+            "wind_direction_10m": 93.32100485239079,
+            "wind_speed_10m": 0.7723482047105729
+        },
+        "2025-02-03 03:15:00+00:00": {
+            "air_temp": 16.82921848408678,
+            "ghi": 0.0,
+            "precipitable_water": 26.467955544411815,
+            "precipitation_rate": 0.21449946012203772,
+            "relative_humidity": 86.79468422183258,
+            "wind_direction_10m": 93.5081716857815,
+            "wind_speed_10m": 0.7704005405528744
+        },
+        "2025-02-03 03:20:00+00:00": {
+            "air_temp": 16.77095856004932,
+            "ghi": 0.0,
+            "precipitable_water": 26.479693102146797,
+            "precipitation_rate": 0.20870599879811802,
+            "relative_humidity": 87.05497388906747,
+            "wind_direction_10m": 93.69533851917222,
+            "wind_speed_10m": 0.7684528763951759
+        },
+        "2025-02-03 03:25:00+00:00": {
+            "air_temp": 16.712698636011854,
+            "ghi": 0.0,
+            "precipitable_water": 26.49143065988178,
+            "precipitation_rate": 0.20291253747419835,
+            "relative_humidity": 87.31526355630237,
+            "wind_direction_10m": 93.88250535256294,
+            "wind_speed_10m": 0.7665052122374775
+        },
+        "2025-02-03 03:30:00+00:00": {
+            "air_temp": 16.654438711974393,
+            "ghi": 0.0,
+            "precipitable_water": 26.50316821761676,
+            "precipitation_rate": 0.19711907615027868,
+            "relative_humidity": 87.57555322353727,
+            "wind_direction_10m": 94.06967218595366,
+            "wind_speed_10m": 0.764557548079779
+        },
+        "2025-02-03 03:35:00+00:00": {
+            "air_temp": 16.59617878793693,
+            "ghi": 0.0,
+            "precipitable_water": 26.514905775351746,
+            "precipitation_rate": 0.191325614826359,
+            "relative_humidity": 87.83584289077216,
+            "wind_direction_10m": 94.25683901934437,
+            "wind_speed_10m": 0.7626098839220805
+        },
+        "2025-02-03 03:40:00+00:00": {
+            "air_temp": 16.537918863899463,
+            "ghi": 0.0,
+            "precipitable_water": 26.526643333086728,
+            "precipitation_rate": 0.18553215350243932,
+            "relative_humidity": 88.09613255800706,
+            "wind_direction_10m": 94.44400585273509,
+            "wind_speed_10m": 0.7606622197643821
+        },
+        "2025-02-03 03:45:00+00:00": {
+            "air_temp": 16.479658939862002,
+            "ghi": 0.0,
+            "precipitable_water": 26.53838089082171,
+            "precipitation_rate": 0.17973869217851962,
+            "relative_humidity": 88.35642222524194,
+            "wind_direction_10m": 94.63117268612581,
+            "wind_speed_10m": 0.7587145556066835
+        },
+        "2025-02-03 03:50:00+00:00": {
+            "air_temp": 16.421399015824537,
+            "ghi": 0.0,
+            "precipitable_water": 26.550118448556695,
+            "precipitation_rate": 0.17394523085459995,
+            "relative_humidity": 88.61671189247684,
+            "wind_direction_10m": 94.81833951951653,
+            "wind_speed_10m": 0.7567668914489851
+        },
+        "2025-02-03 03:55:00+00:00": {
+            "air_temp": 16.363139091787076,
+            "ghi": 0.0,
+            "precipitable_water": 26.561856006291677,
+            "precipitation_rate": 0.16815176953068028,
+            "relative_humidity": 88.87700155971173,
+            "wind_direction_10m": 95.00550635290725,
+            "wind_speed_10m": 0.7548192272912866
+        },
+        "2025-02-03 04:00:00+00:00": {
+            "air_temp": 16.30487916774961,
+            "ghi": 0.0,
+            "precipitable_water": 26.57359356402666,
+            "precipitation_rate": 0.1623583082067606,
+            "relative_humidity": 89.13729122694663,
+            "wind_direction_10m": 95.19267318629797,
+            "wind_speed_10m": 0.7528715631335882
+        },
+        "2025-02-03 04:05:00+00:00": {
+            "air_temp": 16.255748259555638,
+            "ghi": 0.0,
+            "precipitable_water": 26.569625706465647,
+            "precipitation_rate": 0.15757686881903799,
+            "relative_humidity": 89.31881011367796,
+            "wind_direction_10m": 95.7160030602054,
+            "wind_speed_10m": 0.7526386779376404
+        },
+        "2025-02-03 04:10:00+00:00": {
+            "air_temp": 16.20661735136167,
+            "ghi": 0.0,
+            "precipitable_water": 26.565657848904635,
+            "precipitation_rate": 0.1527954294313154,
+            "relative_humidity": 89.50032900040927,
+            "wind_direction_10m": 96.23933293411282,
+            "wind_speed_10m": 0.7524057927416927
+        },
+        "2025-02-03 04:15:00+00:00": {
+            "air_temp": 16.157486443167695,
+            "ghi": 0.0,
+            "precipitable_water": 26.561689991343627,
+            "precipitation_rate": 0.1480139900435928,
+            "relative_humidity": 89.68184788714059,
+            "wind_direction_10m": 96.76266280802025,
+            "wind_speed_10m": 0.7521729075457451
+        },
+        "2025-02-03 04:20:00+00:00": {
+            "air_temp": 16.108355534973725,
+            "ghi": 0.0,
+            "precipitable_water": 26.557722133782615,
+            "precipitation_rate": 0.1432325506558702,
+            "relative_humidity": 89.86336677387192,
+            "wind_direction_10m": 97.28599268192768,
+            "wind_speed_10m": 0.7519400223497973
+        },
+        "2025-02-03 04:25:00+00:00": {
+            "air_temp": 16.059224626779752,
+            "ghi": 0.0,
+            "precipitable_water": 26.553754276221603,
+            "precipitation_rate": 0.13845111126814763,
+            "relative_humidity": 90.04488566060323,
+            "wind_direction_10m": 97.80932255583511,
+            "wind_speed_10m": 0.7517071371538495
+        },
+        "2025-02-03 04:30:00+00:00": {
+            "air_temp": 16.010093718585782,
+            "ghi": 0.0,
+            "precipitable_water": 26.549786418660595,
+            "precipitation_rate": 0.13366967188042503,
+            "relative_humidity": 90.22640454733455,
+            "wind_direction_10m": 98.33265242974254,
+            "wind_speed_10m": 0.7514742519579019
+        },
+        "2025-02-03 04:35:00+00:00": {
+            "air_temp": 15.960962810391809,
+            "ghi": 0.0,
+            "precipitable_water": 26.545818561099583,
+            "precipitation_rate": 0.12888823249270243,
+            "relative_humidity": 90.40792343406588,
+            "wind_direction_10m": 98.85598230364997,
+            "wind_speed_10m": 0.7512413667619542
+        },
+        "2025-02-03 04:40:00+00:00": {
+            "air_temp": 15.911831902197838,
+            "ghi": 0.0,
+            "precipitable_water": 26.54185070353857,
+            "precipitation_rate": 0.12410679310497985,
+            "relative_humidity": 90.58944232079719,
+            "wind_direction_10m": 99.3793121775574,
+            "wind_speed_10m": 0.7510084815660064
+        },
+        "2025-02-03 04:45:00+00:00": {
+            "air_temp": 15.862700994003866,
+            "ghi": 0.0,
+            "precipitable_water": 26.53788284597756,
+            "precipitation_rate": 0.11932535371725725,
+            "relative_humidity": 90.77096120752852,
+            "wind_direction_10m": 99.90264205146482,
+            "wind_speed_10m": 0.7507755963700586
+        },
+        "2025-02-03 04:50:00+00:00": {
+            "air_temp": 15.813570085809895,
+            "ghi": 0.0,
+            "precipitable_water": 26.533914988416548,
+            "precipitation_rate": 0.11454391432953465,
+            "relative_humidity": 90.95248009425984,
+            "wind_direction_10m": 100.42597192537225,
+            "wind_speed_10m": 0.750542711174111
+        },
+        "2025-02-03 04:55:00+00:00": {
+            "air_temp": 15.764439177615923,
+            "ghi": 0.0,
+            "precipitable_water": 26.52994713085554,
+            "precipitation_rate": 0.10976247494181207,
+            "relative_humidity": 91.13399898099115,
+            "wind_direction_10m": 100.94930179927968,
+            "wind_speed_10m": 0.7503098259781633
+        },
+        "2025-02-03 05:00:00+00:00": {
+            "air_temp": 15.715308269421952,
+            "ghi": 0.0,
+            "precipitable_water": 26.525979273294528,
+            "precipitation_rate": 0.10498103555408947,
+            "relative_humidity": 91.31551786772248,
+            "wind_direction_10m": 101.47263167318711,
+            "wind_speed_10m": 0.7500769407822155
+        },
+        "2025-02-03 05:05:00+00:00": {
+            "air_temp": 15.673802755535908,
+            "ghi": 0.0,
+            "precipitable_water": 26.509429412273505,
+            "precipitation_rate": 0.10509931586964578,
+            "relative_humidity": 91.37754714998051,
+            "wind_direction_10m": 101.76700699131011,
+            "wind_speed_10m": 0.7544471693025666
+        },
+        "2025-02-03 05:10:00+00:00": {
+            "air_temp": 15.632297241649864,
+            "ghi": 0.0,
+            "precipitable_water": 26.492879551252482,
+            "precipitation_rate": 0.1052175961852021,
+            "relative_humidity": 91.43957643223855,
+            "wind_direction_10m": 102.06138230943311,
+            "wind_speed_10m": 0.7588173978229177
+        },
+        "2025-02-03 05:15:00+00:00": {
+            "air_temp": 15.59079172776382,
+            "ghi": 0.0,
+            "precipitable_water": 26.47632969023146,
+            "precipitation_rate": 0.1053358765007584,
+            "relative_humidity": 91.50160571449658,
+            "wind_direction_10m": 102.35575762755612,
+            "wind_speed_10m": 0.7631876263432688
+        },
+        "2025-02-03 05:20:00+00:00": {
+            "air_temp": 15.549286213877776,
+            "ghi": 0.0,
+            "precipitable_water": 26.45977982921044,
+            "precipitation_rate": 0.10545415681631472,
+            "relative_humidity": 91.56363499675462,
+            "wind_direction_10m": 102.65013294567912,
+            "wind_speed_10m": 0.7675578548636198
+        },
+        "2025-02-03 05:25:00+00:00": {
+            "air_temp": 15.507780699991732,
+            "ghi": 0.0,
+            "precipitable_water": 26.443229968189417,
+            "precipitation_rate": 0.10557243713187103,
+            "relative_humidity": 91.62566427901265,
+            "wind_direction_10m": 102.94450826380212,
+            "wind_speed_10m": 0.7719280833839709
+        },
+        "2025-02-03 05:30:00+00:00": {
+            "air_temp": 15.46627518610569,
+            "ghi": 0.0,
+            "precipitable_water": 26.426680107168394,
+            "precipitation_rate": 0.10569071744742735,
+            "relative_humidity": 91.68769356127069,
+            "wind_direction_10m": 103.23888358192511,
+            "wind_speed_10m": 0.7762983119043219
+        },
+        "2025-02-03 05:35:00+00:00": {
+            "air_temp": 15.424769672219647,
+            "ghi": 0.0,
+            "precipitable_water": 26.41013024614737,
+            "precipitation_rate": 0.10580899776298366,
+            "relative_humidity": 91.74972284352873,
+            "wind_direction_10m": 103.53325890004811,
+            "wind_speed_10m": 0.7806685404246729
+        },
+        "2025-02-03 05:40:00+00:00": {
+            "air_temp": 15.383264158333603,
+            "ghi": 0.0,
+            "precipitable_water": 26.39358038512635,
+            "precipitation_rate": 0.10592727807853998,
+            "relative_humidity": 91.81175212578677,
+            "wind_direction_10m": 103.82763421817111,
+            "wind_speed_10m": 0.785038768945024
+        },
+        "2025-02-03 05:45:00+00:00": {
+            "air_temp": 15.341758644447559,
+            "ghi": 0.0,
+            "precipitable_water": 26.37703052410533,
+            "precipitation_rate": 0.1060455583940963,
+            "relative_humidity": 91.8737814080448,
+            "wind_direction_10m": 104.12200953629412,
+            "wind_speed_10m": 0.7894089974653751
+        },
+        "2025-02-03 05:50:00+00:00": {
+            "air_temp": 15.300253130561515,
+            "ghi": 0.0,
+            "precipitable_water": 26.360480663084306,
+            "precipitation_rate": 0.1061638387096526,
+            "relative_humidity": 91.93581069030283,
+            "wind_direction_10m": 104.41638485441712,
+            "wind_speed_10m": 0.7937792259857261
+        },
+        "2025-02-03 05:55:00+00:00": {
+            "air_temp": 15.258747616675471,
+            "ghi": 0.0,
+            "precipitable_water": 26.343930802063284,
+            "precipitation_rate": 0.10628211902520891,
+            "relative_humidity": 91.99783997256087,
+            "wind_direction_10m": 104.71076017254012,
+            "wind_speed_10m": 0.7981494545060772
+        },
+        "2025-02-03 06:00:00+00:00": {
+            "air_temp": 15.217242102789427,
+            "ghi": 0.0,
+            "precipitable_water": 26.32738094104226,
+            "precipitation_rate": 0.10640039934076523,
+            "relative_humidity": 92.0598692548189,
+            "wind_direction_10m": 105.00513549066312,
+            "wind_speed_10m": 0.8025196830264283
+        },
+        "2025-02-03 06:05:00+00:00": {
+            "air_temp": 15.195085875377824,
+            "ghi": 0.0,
+            "precipitable_water": 26.31280096395295,
+            "precipitation_rate": 0.1051097589163952,
+            "relative_humidity": 92.16603318106046,
+            "wind_direction_10m": 104.51604926039657,
+            "wind_speed_10m": 0.8098248485175764
+        },
+        "2025-02-03 06:10:00+00:00": {
+            "air_temp": 15.17292964796622,
+            "ghi": 0.0,
+            "precipitable_water": 26.298220986863637,
+            "precipitation_rate": 0.10381911849202516,
+            "relative_humidity": 92.27219710730202,
+            "wind_direction_10m": 104.02696303013002,
+            "wind_speed_10m": 0.8171300140087246
+        },
+        "2025-02-03 06:15:00+00:00": {
+            "air_temp": 15.150773420554614,
+            "ghi": 0.0,
+            "precipitable_water": 26.283641009774325,
+            "precipitation_rate": 0.10252847806765511,
+            "relative_humidity": 92.37836103354357,
+            "wind_direction_10m": 103.53787679986347,
+            "wind_speed_10m": 0.8244351794998728
+        },
+        "2025-02-03 06:20:00+00:00": {
+            "air_temp": 15.128617193143011,
+            "ghi": 0.0,
+            "precipitable_water": 26.269061032685013,
+            "precipitation_rate": 0.10123783764328508,
+            "relative_humidity": 92.48452495978513,
+            "wind_direction_10m": 103.04879056959692,
+            "wind_speed_10m": 0.8317403449910209
+        },
+        "2025-02-03 06:25:00+00:00": {
+            "air_temp": 15.106460965731408,
+            "ghi": 0.0,
+            "precipitable_water": 26.2544810555957,
+            "precipitation_rate": 0.09994719721891504,
+            "relative_humidity": 92.59068888602668,
+            "wind_direction_10m": 102.55970433933037,
+            "wind_speed_10m": 0.8390455104821691
+        },
+        "2025-02-03 06:30:00+00:00": {
+            "air_temp": 15.084304738319803,
+            "ghi": 0.0,
+            "precipitable_water": 26.239901078506385,
+            "precipitation_rate": 0.09865655679454499,
+            "relative_humidity": 92.69685281226825,
+            "wind_direction_10m": 102.07061810906382,
+            "wind_speed_10m": 0.8463506759733173
+        },
+        "2025-02-03 06:35:00+00:00": {
+            "air_temp": 15.062148510908198,
+            "ghi": 0.0,
+            "precipitable_water": 26.225321101417073,
+            "precipitation_rate": 0.09736591637017496,
+            "relative_humidity": 92.8030167385098,
+            "wind_direction_10m": 101.58153187879728,
+            "wind_speed_10m": 0.8536558414644654
+        },
+        "2025-02-03 06:40:00+00:00": {
+            "air_temp": 15.039992283496595,
+            "ghi": 0.0,
+            "precipitable_water": 26.21074112432776,
+            "precipitation_rate": 0.09607527594580492,
+            "relative_humidity": 92.90918066475135,
+            "wind_direction_10m": 101.09244564853073,
+            "wind_speed_10m": 0.8609610069556136
+        },
+        "2025-02-03 06:45:00+00:00": {
+            "air_temp": 15.017836056084992,
+            "ghi": 0.0,
+            "precipitable_water": 26.19616114723845,
+            "precipitation_rate": 0.09478463552143489,
+            "relative_humidity": 93.01534459099291,
+            "wind_direction_10m": 100.60335941826418,
+            "wind_speed_10m": 0.8682661724467617
+        },
+        "2025-02-03 06:50:00+00:00": {
+            "air_temp": 14.995679828673387,
+            "ghi": 0.0,
+            "precipitable_water": 26.181581170149137,
+            "precipitation_rate": 0.09349399509706485,
+            "relative_humidity": 93.12150851723446,
+            "wind_direction_10m": 100.11427318799763,
+            "wind_speed_10m": 0.8755713379379099
+        },
+        "2025-02-03 06:55:00+00:00": {
+            "air_temp": 14.973523601261782,
+            "ghi": 0.0,
+            "precipitable_water": 26.167001193059825,
+            "precipitation_rate": 0.0922033546726948,
+            "relative_humidity": 93.22767244347602,
+            "wind_direction_10m": 99.62518695773107,
+            "wind_speed_10m": 0.8828765034290581
+        },
+        "2025-02-03 07:00:00+00:00": {
+            "air_temp": 14.951367373850179,
+            "ghi": 0.0,
+            "precipitable_water": 26.152421215970513,
+            "precipitation_rate": 0.09091271424832477,
+            "relative_humidity": 93.33383636971757,
+            "wind_direction_10m": 99.13610072746452,
+            "wind_speed_10m": 0.8901816689202062
+        },
+        "2025-02-03 07:05:00+00:00": {
+            "air_temp": 14.917204381402389,
+            "ghi": 0.0,
+            "precipitable_water": 26.130025911367234,
+            "precipitation_rate": 0.09067670058834663,
+            "relative_humidity": 93.45484957718993,
+            "wind_direction_10m": 98.63576629833186,
+            "wind_speed_10m": 0.8959186817763762
+        },
+        "2025-02-03 07:10:00+00:00": {
+            "air_temp": 14.8830413889546,
+            "ghi": 0.0,
+            "precipitable_water": 26.10763060676395,
+            "precipitation_rate": 0.09044068692836849,
+            "relative_humidity": 93.57586278466229,
+            "wind_direction_10m": 98.13543186919918,
+            "wind_speed_10m": 0.9016556946325462
+        },
+        "2025-02-03 07:15:00+00:00": {
+            "air_temp": 14.84887839650681,
+            "ghi": 0.0,
+            "precipitable_water": 26.085235302160672,
+            "precipitation_rate": 0.09020467326839035,
+            "relative_humidity": 93.69687599213466,
+            "wind_direction_10m": 97.63509744006652,
+            "wind_speed_10m": 0.9073927074887163
+        },
+        "2025-02-03 07:20:00+00:00": {
+            "air_temp": 14.814715404059022,
+            "ghi": 0.0,
+            "precipitable_water": 26.06283999755739,
+            "precipitation_rate": 0.08996865960841222,
+            "relative_humidity": 93.81788919960702,
+            "wind_direction_10m": 97.13476301093385,
+            "wind_speed_10m": 0.9131297203448863
+        },
+        "2025-02-03 07:25:00+00:00": {
+            "air_temp": 14.780552411611232,
+            "ghi": 0.0,
+            "precipitable_water": 26.04044469295411,
+            "precipitation_rate": 0.08973264594843408,
+            "relative_humidity": 93.93890240707938,
+            "wind_direction_10m": 96.63442858180119,
+            "wind_speed_10m": 0.9188667332010563
+        },
+        "2025-02-03 07:30:00+00:00": {
+            "air_temp": 14.746389419163442,
+            "ghi": 0.0,
+            "precipitable_water": 26.018049388350832,
+            "precipitation_rate": 0.08949663228845595,
+            "relative_humidity": 94.05991561455176,
+            "wind_direction_10m": 96.13409415266852,
+            "wind_speed_10m": 0.9246037460572263
+        },
+        "2025-02-03 07:35:00+00:00": {
+            "air_temp": 14.712226426715654,
+            "ghi": 0.0,
+            "precipitable_water": 25.99565408374755,
+            "precipitation_rate": 0.0892606186284778,
+            "relative_humidity": 94.18092882202411,
+            "wind_direction_10m": 95.63375972353585,
+            "wind_speed_10m": 0.9303407589133963
+        },
+        "2025-02-03 07:40:00+00:00": {
+            "air_temp": 14.678063434267864,
+            "ghi": 0.0,
+            "precipitable_water": 25.97325877914427,
+            "precipitation_rate": 0.08902460496849966,
+            "relative_humidity": 94.30194202949647,
+            "wind_direction_10m": 95.13342529440318,
+            "wind_speed_10m": 0.9360777717695663
+        },
+        "2025-02-03 07:45:00+00:00": {
+            "air_temp": 14.643900441820076,
+            "ghi": 0.0,
+            "precipitable_water": 25.950863474540988,
+            "precipitation_rate": 0.08878859130852153,
+            "relative_humidity": 94.42295523696883,
+            "wind_direction_10m": 94.63309086527052,
+            "wind_speed_10m": 0.9418147846257363
+        },
+        "2025-02-03 07:50:00+00:00": {
+            "air_temp": 14.609737449372286,
+            "ghi": 0.0,
+            "precipitable_water": 25.92846816993771,
+            "precipitation_rate": 0.08855257764854338,
+            "relative_humidity": 94.54396844444119,
+            "wind_direction_10m": 94.13275643613784,
+            "wind_speed_10m": 0.9475517974819063
+        },
+        "2025-02-03 07:55:00+00:00": {
+            "air_temp": 14.575574456924498,
+            "ghi": 0.0,
+            "precipitable_water": 25.906072865334426,
+            "precipitation_rate": 0.08831656398856524,
+            "relative_humidity": 94.66498165191356,
+            "wind_direction_10m": 93.63242200700518,
+            "wind_speed_10m": 0.9532888103380763
+        },
+        "2025-02-03 08:00:00+00:00": {
+            "air_temp": 14.541411464476708,
+            "ghi": 0.0,
+            "precipitable_water": 25.883677560731147,
+            "precipitation_rate": 0.08808055032858711,
+            "relative_humidity": 94.78599485938592,
+            "wind_direction_10m": 93.13208757787251,
+            "wind_speed_10m": 0.9590258231942463
+        },
+        "2025-02-03 08:05:00+00:00": {
+            "air_temp": 14.544466628700224,
+            "ghi": 0.0,
+            "precipitable_water": 25.846424925941335,
+            "precipitation_rate": 0.08684376018132176,
+            "relative_humidity": 94.86646936952043,
+            "wind_direction_10m": 91.89872439395506,
+            "wind_speed_10m": 0.9500336181176564
+        },
+        "2025-02-03 08:10:00+00:00": {
+            "air_temp": 14.547521792923739,
+            "ghi": 0.0,
+            "precipitable_water": 25.809172291151523,
+            "precipitation_rate": 0.0856069700340564,
+            "relative_humidity": 94.94694387965494,
+            "wind_direction_10m": 90.66536121003763,
+            "wind_speed_10m": 0.9410414130410665
+        },
+        "2025-02-03 08:15:00+00:00": {
+            "air_temp": 14.550576957147255,
+            "ghi": 0.0,
+            "precipitable_water": 25.77191965636171,
+            "precipitation_rate": 0.08437017988679105,
+            "relative_humidity": 95.02741838978945,
+            "wind_direction_10m": 89.43199802612018,
+            "wind_speed_10m": 0.9320492079644765
+        },
+        "2025-02-03 08:20:00+00:00": {
+            "air_temp": 14.553632121370772,
+            "ghi": 0.0,
+            "precipitable_water": 25.734667021571898,
+            "precipitation_rate": 0.08313338973952569,
+            "relative_humidity": 95.10789289992395,
+            "wind_direction_10m": 88.19863484220275,
+            "wind_speed_10m": 0.9230570028878866
+        },
+        "2025-02-03 08:25:00+00:00": {
+            "air_temp": 14.556687285594286,
+            "ghi": 0.0,
+            "precipitable_water": 25.697414386782086,
+            "precipitation_rate": 0.08189659959226034,
+            "relative_humidity": 95.18836741005846,
+            "wind_direction_10m": 86.9652716582853,
+            "wind_speed_10m": 0.9140647978112967
+        },
+        "2025-02-03 08:30:00+00:00": {
+            "air_temp": 14.559742449817803,
+            "ghi": 0.0,
+            "precipitable_water": 25.660161751992273,
+            "precipitation_rate": 0.08065980944499498,
+            "relative_humidity": 95.26884192019295,
+            "wind_direction_10m": 85.73190847436786,
+            "wind_speed_10m": 0.9050725927347067
+        },
+        "2025-02-03 08:35:00+00:00": {
+            "air_temp": 14.562797614041319,
+            "ghi": 0.0,
+            "precipitable_water": 25.62290911720246,
+            "precipitation_rate": 0.07942301929772962,
+            "relative_humidity": 95.34931643032746,
+            "wind_direction_10m": 84.49854529045042,
+            "wind_speed_10m": 0.8960803876581167
+        },
+        "2025-02-03 08:40:00+00:00": {
+            "air_temp": 14.565852778264833,
+            "ghi": 0.0,
+            "precipitable_water": 25.58565648241265,
+            "precipitation_rate": 0.07818622915046426,
+            "relative_humidity": 95.42979094046197,
+            "wind_direction_10m": 83.26518210653298,
+            "wind_speed_10m": 0.8870881825815268
+        },
+        "2025-02-03 08:45:00+00:00": {
+            "air_temp": 14.56890794248835,
+            "ghi": 0.0,
+            "precipitable_water": 25.548403847622836,
+            "precipitation_rate": 0.07694943900319891,
+            "relative_humidity": 95.51026545059648,
+            "wind_direction_10m": 82.03181892261554,
+            "wind_speed_10m": 0.8780959775049368
+        },
+        "2025-02-03 08:50:00+00:00": {
+            "air_temp": 14.571963106711866,
+            "ghi": 0.0,
+            "precipitable_water": 25.511151212833024,
+            "precipitation_rate": 0.07571264885593355,
+            "relative_humidity": 95.59073996073099,
+            "wind_direction_10m": 80.7984557386981,
+            "wind_speed_10m": 0.8691037724283469
+        },
+        "2025-02-03 08:55:00+00:00": {
+            "air_temp": 14.57501827093538,
+            "ghi": 0.0,
+            "precipitable_water": 25.47389857804321,
+            "precipitation_rate": 0.0744758587086682,
+            "relative_humidity": 95.6712144708655,
+            "wind_direction_10m": 79.56509255478066,
+            "wind_speed_10m": 0.860111567351757
+        },
+        "2025-02-03 09:00:00+00:00": {
+            "air_temp": 14.578073435158897,
+            "ghi": 0.0,
+            "precipitable_water": 25.4366459432534,
+            "precipitation_rate": 0.07323906856140285,
+            "relative_humidity": 95.751688981,
+            "wind_direction_10m": 78.33172937086321,
+            "wind_speed_10m": 0.851119362275167
+        },
+        "2025-02-03 09:05:00+00:00": {
+            "air_temp": 14.606375638115713,
+            "ghi": 0.0,
+            "precipitable_water": 25.407877448727902,
+            "precipitation_rate": 0.07550876772833594,
+            "relative_humidity": 95.78527459024892,
+            "wind_direction_10m": 81.15585298079824,
+            "wind_speed_10m": 0.842747159515616
+        },
+        "2025-02-03 09:10:00+00:00": {
+            "air_temp": 14.634677841072529,
+            "ghi": 0.0,
+            "precipitable_water": 25.3791089542024,
+            "precipitation_rate": 0.07777846689526904,
+            "relative_humidity": 95.81886019949785,
+            "wind_direction_10m": 83.97997659073327,
+            "wind_speed_10m": 0.8343749567560649
+        },
+        "2025-02-03 09:15:00+00:00": {
+            "air_temp": 14.662980044029347,
+            "ghi": 0.0,
+            "precipitable_water": 25.350340459676904,
+            "precipitation_rate": 0.08004816606220214,
+            "relative_humidity": 95.85244580874677,
+            "wind_direction_10m": 86.8041002006683,
+            "wind_speed_10m": 0.8260027539965138
+        },
+        "2025-02-03 09:20:00+00:00": {
+            "air_temp": 14.691282246986162,
+            "ghi": 0.0,
+            "precipitable_water": 25.321571965151406,
+            "precipitation_rate": 0.08231786522913523,
+            "relative_humidity": 95.88603141799568,
+            "wind_direction_10m": 89.62822381060333,
+            "wind_speed_10m": 0.8176305512369627
+        },
+        "2025-02-03 09:25:00+00:00": {
+            "air_temp": 14.719584449942978,
+            "ghi": 0.0,
+            "precipitable_water": 25.29280347062591,
+            "precipitation_rate": 0.08458756439606833,
+            "relative_humidity": 95.91961702724461,
+            "wind_direction_10m": 92.45234742053836,
+            "wind_speed_10m": 0.8092583484774116
+        },
+        "2025-02-03 09:30:00+00:00": {
+            "air_temp": 14.747886652899794,
+            "ghi": 0.0,
+            "precipitable_water": 25.26403497610041,
+            "precipitation_rate": 0.08685726356300143,
+            "relative_humidity": 95.95320263649353,
+            "wind_direction_10m": 95.2764710304734,
+            "wind_speed_10m": 0.8008861457178607
+        },
+        "2025-02-03 09:35:00+00:00": {
+            "air_temp": 14.77618885585661,
+            "ghi": 0.0,
+            "precipitable_water": 25.23526648157491,
+            "precipitation_rate": 0.08912696272993453,
+            "relative_humidity": 95.98678824574245,
+            "wind_direction_10m": 98.10059464040843,
+            "wind_speed_10m": 0.7925139429583096
+        },
+        "2025-02-03 09:40:00+00:00": {
+            "air_temp": 14.804491058813426,
+            "ghi": 0.0,
+            "precipitable_water": 25.206497987049413,
+            "precipitation_rate": 0.09139666189686763,
+            "relative_humidity": 96.02037385499138,
+            "wind_direction_10m": 100.92471825034346,
+            "wind_speed_10m": 0.7841417401987585
+        },
+        "2025-02-03 09:45:00+00:00": {
+            "air_temp": 14.832793261770242,
+            "ghi": 0.0,
+            "precipitable_water": 25.177729492523916,
+            "precipitation_rate": 0.09366636106380072,
+            "relative_humidity": 96.0539594642403,
+            "wind_direction_10m": 103.74884186027849,
+            "wind_speed_10m": 0.7757695374392074
+        },
+        "2025-02-03 09:50:00+00:00": {
+            "air_temp": 14.86109546472706,
+            "ghi": 0.0,
+            "precipitable_water": 25.148960997998415,
+            "precipitation_rate": 0.09593606023073381,
+            "relative_humidity": 96.08754507348921,
+            "wind_direction_10m": 106.57296547021352,
+            "wind_speed_10m": 0.7673973346796563
+        },
+        "2025-02-03 09:55:00+00:00": {
+            "air_temp": 14.889397667683875,
+            "ghi": 0.0,
+            "precipitable_water": 25.120192503472918,
+            "precipitation_rate": 0.0982057593976669,
+            "relative_humidity": 96.12113068273814,
+            "wind_direction_10m": 109.39708908014855,
+            "wind_speed_10m": 0.7590251319201052
+        },
+        "2025-02-03 10:00:00+00:00": {
+            "air_temp": 14.917699870640691,
+            "ghi": 0.0,
+            "precipitable_water": 25.09142400894742,
+            "precipitation_rate": 0.10047545856460001,
+            "relative_humidity": 96.15471629198706,
+            "wind_direction_10m": 112.22121269008358,
+            "wind_speed_10m": 0.7506529291605541
+        },
+        "2025-02-03 10:05:00+00:00": {
+            "air_temp": 14.927791366121522,
+            "ghi": 0.9465344948450701,
+            "precipitable_water": 25.102387898610665,
+            "precipitation_rate": 0.10075789301322245,
+            "relative_humidity": 96.14990359297019,
+            "wind_direction_10m": 111.35092354447124,
+            "wind_speed_10m": 0.7552265501438111
+        },
+        "2025-02-03 10:10:00+00:00": {
+            "air_temp": 14.937882861602354,
+            "ghi": 1.8930689896901403,
+            "precipitable_water": 25.11335178827391,
+            "precipitation_rate": 0.10104032746184491,
+            "relative_humidity": 96.14509089395332,
+            "wind_direction_10m": 110.48063439885892,
+            "wind_speed_10m": 0.7598001711270681
+        },
+        "2025-02-03 10:15:00+00:00": {
+            "air_temp": 14.947974357083185,
+            "ghi": 2.8396034845352105,
+            "precipitable_water": 25.124315677937155,
+            "precipitation_rate": 0.10132276191046735,
+            "relative_humidity": 96.14027819493646,
+            "wind_direction_10m": 109.61034525324659,
+            "wind_speed_10m": 0.7643737921103252
+        },
+        "2025-02-03 10:20:00+00:00": {
+            "air_temp": 14.958065852564015,
+            "ghi": 3.7861379793802805,
+            "precipitable_water": 25.1352795676004,
+            "precipitation_rate": 0.1016051963590898,
+            "relative_humidity": 96.13546549591959,
+            "wind_direction_10m": 108.74005610763426,
+            "wind_speed_10m": 0.7689474130935822
+        },
+        "2025-02-03 10:25:00+00:00": {
+            "air_temp": 14.968157348044846,
+            "ghi": 4.732672474225351,
+            "precipitable_water": 25.146243457263644,
+            "precipitation_rate": 0.10188763080771225,
+            "relative_humidity": 96.13065279690272,
+            "wind_direction_10m": 107.86976696202194,
+            "wind_speed_10m": 0.7735210340768391
+        },
+        "2025-02-03 10:30:00+00:00": {
+            "air_temp": 14.978248843525677,
+            "ghi": 5.679206969070421,
+            "precipitable_water": 25.15720734692689,
+            "precipitation_rate": 0.1021700652563347,
+            "relative_humidity": 96.12584009788586,
+            "wind_direction_10m": 106.99947781640961,
+            "wind_speed_10m": 0.7780946550600962
+        },
+        "2025-02-03 10:35:00+00:00": {
+            "air_temp": 14.988340339006509,
+            "ghi": 6.6257414639154915,
+            "precipitable_water": 25.16817123659013,
+            "precipitation_rate": 0.10245249970495714,
+            "relative_humidity": 96.121027398869,
+            "wind_direction_10m": 106.12918867079728,
+            "wind_speed_10m": 0.7826682760433532
+        },
+        "2025-02-03 10:40:00+00:00": {
+            "air_temp": 14.99843183448734,
+            "ghi": 7.572275958760561,
+            "precipitable_water": 25.179135126253374,
+            "precipitation_rate": 0.1027349341535796,
+            "relative_humidity": 96.11621469985214,
+            "wind_direction_10m": 105.25889952518496,
+            "wind_speed_10m": 0.7872418970266102
+        },
+        "2025-02-03 10:45:00+00:00": {
+            "air_temp": 15.00852332996817,
+            "ghi": 8.518810453605631,
+            "precipitable_water": 25.19009901591662,
+            "precipitation_rate": 0.10301736860220204,
+            "relative_humidity": 96.11140200083527,
+            "wind_direction_10m": 104.38861037957263,
+            "wind_speed_10m": 0.7918155180098672
+        },
+        "2025-02-03 10:50:00+00:00": {
+            "air_temp": 15.018614825449003,
+            "ghi": 9.465344948450703,
+            "precipitable_water": 25.201062905579864,
+            "precipitation_rate": 0.10329980305082448,
+            "relative_humidity": 96.1065893018184,
+            "wind_direction_10m": 103.5183212339603,
+            "wind_speed_10m": 0.7963891389931241
+        },
+        "2025-02-03 10:55:00+00:00": {
+            "air_temp": 15.028706320929833,
+            "ghi": 10.41187944329577,
+            "precipitable_water": 25.21202679524311,
+            "precipitation_rate": 0.10358223749944694,
+            "relative_humidity": 96.10177660280154,
+            "wind_direction_10m": 102.64803208834797,
+            "wind_speed_10m": 0.8009627599763812
+        },
+        "2025-02-03 11:00:00+00:00": {
+            "air_temp": 15.038797816410664,
+            "ghi": 11.358413938140842,
+            "precipitable_water": 25.222990684906353,
+            "precipitation_rate": 0.10386467194806938,
+            "relative_humidity": 96.09696390378467,
+            "wind_direction_10m": 101.77774294273564,
+            "wind_speed_10m": 0.8055363809596382
+        },
+        "2025-02-03 11:05:00+00:00": {
+            "air_temp": 15.091009912113892,
+            "ghi": 20.99575119848036,
+            "precipitable_water": 25.222747141580527,
+            "precipitation_rate": 0.10391302522004366,
+            "relative_humidity": 95.91534441739628,
+            "wind_direction_10m": 101.46508983406362,
+            "wind_speed_10m": 0.8074266389103267
+        },
+        "2025-02-03 11:10:00+00:00": {
+            "air_temp": 15.143222007817117,
+            "ghi": 30.633088458819877,
+            "precipitable_water": 25.222503598254704,
+            "precipitation_rate": 0.10396137849201795,
+            "relative_humidity": 95.7337249310079,
+            "wind_direction_10m": 101.15243672539161,
+            "wind_speed_10m": 0.8093168968610154
+        },
+        "2025-02-03 11:15:00+00:00": {
+            "air_temp": 15.195434103520345,
+            "ghi": 40.2704257191594,
+            "precipitable_water": 25.222260054928878,
+            "precipitation_rate": 0.10400973176399222,
+            "relative_humidity": 95.55210544461951,
+            "wind_direction_10m": 100.83978361671959,
+            "wind_speed_10m": 0.8112071548117039
+        },
+        "2025-02-03 11:20:00+00:00": {
+            "air_temp": 15.247646199223572,
+            "ghi": 49.90776297949891,
+            "precipitable_water": 25.22201651160305,
+            "precipitation_rate": 0.10405808503596652,
+            "relative_humidity": 95.37048595823113,
+            "wind_direction_10m": 100.52713050804756,
+            "wind_speed_10m": 0.8130974127623924
+        },
+        "2025-02-03 11:25:00+00:00": {
+            "air_temp": 15.299858294926798,
+            "ghi": 59.54510023983844,
+            "precipitable_water": 25.221772968277225,
+            "precipitation_rate": 0.1041064383079408,
+            "relative_humidity": 95.18886647184274,
+            "wind_direction_10m": 100.21447739937555,
+            "wind_speed_10m": 0.8149876707130811
+        },
+        "2025-02-03 11:30:00+00:00": {
+            "air_temp": 15.352070390630026,
+            "ghi": 69.18243750017795,
+            "precipitable_water": 25.2215294249514,
+            "precipitation_rate": 0.10415479157991508,
+            "relative_humidity": 95.00724698545436,
+            "wind_direction_10m": 99.90182429070353,
+            "wind_speed_10m": 0.8168779286637696
+        },
+        "2025-02-03 11:35:00+00:00": {
+            "air_temp": 15.404282486333253,
+            "ghi": 78.81977476051748,
+            "precipitable_water": 25.221285881625576,
+            "precipitation_rate": 0.10420314485188936,
+            "relative_humidity": 94.82562749906597,
+            "wind_direction_10m": 99.5891711820315,
+            "wind_speed_10m": 0.8187681866144582
+        },
+        "2025-02-03 11:40:00+00:00": {
+            "air_temp": 15.456494582036479,
+            "ghi": 88.45711202085698,
+            "precipitable_water": 25.22104233829975,
+            "precipitation_rate": 0.10425149812386364,
+            "relative_humidity": 94.64400801267759,
+            "wind_direction_10m": 99.2765180733595,
+            "wind_speed_10m": 0.8206584445651468
+        },
+        "2025-02-03 11:45:00+00:00": {
+            "air_temp": 15.508706677739706,
+            "ghi": 98.09444928119652,
+            "precipitable_water": 25.220798794973923,
+            "precipitation_rate": 0.10429985139583793,
+            "relative_humidity": 94.4623885262892,
+            "wind_direction_10m": 98.96386496468747,
+            "wind_speed_10m": 0.8225487025158353
+        },
+        "2025-02-03 11:50:00+00:00": {
+            "air_temp": 15.560918773442934,
+            "ghi": 107.73178654153604,
+            "precipitable_water": 25.2205552516481,
+            "precipitation_rate": 0.10434820466781221,
+            "relative_humidity": 94.28076903990082,
+            "wind_direction_10m": 98.65121185601545,
+            "wind_speed_10m": 0.8244389604665239
+        },
+        "2025-02-03 11:55:00+00:00": {
+            "air_temp": 15.61313086914616,
+            "ghi": 117.36912380187555,
+            "precipitable_water": 25.220311708322274,
+            "precipitation_rate": 0.1043965579397865,
+            "relative_humidity": 94.09914955351243,
+            "wind_direction_10m": 98.33855874734344,
+            "wind_speed_10m": 0.8263292184172125
+        },
+        "2025-02-03 12:00:00+00:00": {
+            "air_temp": 15.665342964849387,
+            "ghi": 127.00646106221507,
+            "precipitable_water": 25.220068164996448,
+            "precipitation_rate": 0.10444491121176078,
+            "relative_humidity": 93.91753006712405,
+            "wind_direction_10m": 98.02590563867142,
+            "wind_speed_10m": 0.828219476367901
+        },
+        "2025-02-03 12:05:00+00:00": {
+            "air_temp": 15.812217999520499,
+            "ghi": 144.1804882262162,
+            "precipitable_water": 25.20587420149097,
+            "precipitation_rate": 0.10718645555273933,
+            "relative_humidity": 93.32589611688648,
+            "wind_direction_10m": 98.86926844924366,
+            "wind_speed_10m": 0.8313398395523595
+        },
+        "2025-02-03 12:10:00+00:00": {
+            "air_temp": 15.959093034191612,
+            "ghi": 161.35451539021733,
+            "precipitable_water": 25.191680237985494,
+            "precipitation_rate": 0.10992799989371788,
+            "relative_humidity": 92.73426216664892,
+            "wind_direction_10m": 99.71263125981592,
+            "wind_speed_10m": 0.834460202736818
+        },
+        "2025-02-03 12:15:00+00:00": {
+            "air_temp": 16.105968068862722,
+            "ghi": 178.52854255421846,
+            "precipitable_water": 25.177486274480017,
+            "precipitation_rate": 0.11266954423469641,
+            "relative_humidity": 92.14262821641135,
+            "wind_direction_10m": 100.55599407038818,
+            "wind_speed_10m": 0.8375805659212764
+        },
+        "2025-02-03 12:20:00+00:00": {
+            "air_temp": 16.252843103533838,
+            "ghi": 195.7025697182196,
+            "precipitable_water": 25.16329231097454,
+            "precipitation_rate": 0.11541108857567496,
+            "relative_humidity": 91.55099426617379,
+            "wind_direction_10m": 101.39935688096043,
+            "wind_speed_10m": 0.8407009291057349
+        },
+        "2025-02-03 12:25:00+00:00": {
+            "air_temp": 16.39971813820495,
+            "ghi": 212.87659688222072,
+            "precipitable_water": 25.149098347469064,
+            "precipitation_rate": 0.11815263291665351,
+            "relative_humidity": 90.95936031593622,
+            "wind_direction_10m": 102.24271969153267,
+            "wind_speed_10m": 0.8438212922901933
+        },
+        "2025-02-03 12:30:00+00:00": {
+            "air_temp": 16.54659317287606,
+            "ghi": 230.05062404622186,
+            "precipitable_water": 25.134904383963587,
+            "precipitation_rate": 0.12089417725763206,
+            "relative_humidity": 90.36772636569864,
+            "wind_direction_10m": 103.08608250210493,
+            "wind_speed_10m": 0.8469416554746518
+        },
+        "2025-02-03 12:35:00+00:00": {
+            "air_temp": 16.693468207547173,
+            "ghi": 247.224651210223,
+            "precipitable_water": 25.120710420458106,
+            "precipitation_rate": 0.12363572159861061,
+            "relative_humidity": 89.77609241546108,
+            "wind_direction_10m": 103.92944531267719,
+            "wind_speed_10m": 0.8500620186591102
+        },
+        "2025-02-03 12:40:00+00:00": {
+            "air_temp": 16.840343242218285,
+            "ghi": 264.3986783742241,
+            "precipitable_water": 25.10651645695263,
+            "precipitation_rate": 0.12637726593958915,
+            "relative_humidity": 89.18445846522351,
+            "wind_direction_10m": 104.77280812324943,
+            "wind_speed_10m": 0.8531823818435686
+        },
+        "2025-02-03 12:45:00+00:00": {
+            "air_temp": 16.9872182768894,
+            "ghi": 281.57270553822525,
+            "precipitable_water": 25.092322493447153,
+            "precipitation_rate": 0.1291188102805677,
+            "relative_humidity": 88.59282451498595,
+            "wind_direction_10m": 105.61617093382168,
+            "wind_speed_10m": 0.8563027450280272
+        },
+        "2025-02-03 12:50:00+00:00": {
+            "air_temp": 17.134093311560513,
+            "ghi": 298.7467327022264,
+            "precipitable_water": 25.078128529941676,
+            "precipitation_rate": 0.13186035462154624,
+            "relative_humidity": 88.00119056474838,
+            "wind_direction_10m": 106.45953374439394,
+            "wind_speed_10m": 0.8594231082124856
+        },
+        "2025-02-03 12:55:00+00:00": {
+            "air_temp": 17.280968346231624,
+            "ghi": 315.9207598662275,
+            "precipitable_water": 25.0639345664362,
+            "precipitation_rate": 0.13460189896252478,
+            "relative_humidity": 87.40955661451082,
+            "wind_direction_10m": 107.3028965549662,
+            "wind_speed_10m": 0.8625434713969441
+        },
+        "2025-02-03 13:00:00+00:00": {
+            "air_temp": 17.427843380902736,
+            "ghi": 333.09478703022864,
+            "precipitable_water": 25.049740602930722,
+            "precipitation_rate": 0.13734344330350334,
+            "relative_humidity": 86.81792266427325,
+            "wind_direction_10m": 108.14625936553844,
+            "wind_speed_10m": 0.8656638345814025
+        },
+        "2025-02-03 13:05:00+00:00": {
+            "air_temp": 17.58595957865026,
+            "ghi": 347.8914501383852,
+            "precipitable_water": 25.044237883646094,
+            "precipitation_rate": 0.1367739564420351,
+            "relative_humidity": 86.11847289719712,
+            "wind_direction_10m": 109.03984846102828,
+            "wind_speed_10m": 0.8700534216776815
+        },
+        "2025-02-03 13:10:00+00:00": {
+            "air_temp": 17.744075776397782,
+            "ghi": 362.68811324654183,
+            "precipitable_water": 25.03873516436147,
+            "precipitation_rate": 0.13620446958056687,
+            "relative_humidity": 85.41902313012098,
+            "wind_direction_10m": 109.93343755651814,
+            "wind_speed_10m": 0.8744430087739605
+        },
+        "2025-02-03 13:15:00+00:00": {
+            "air_temp": 17.902191974145303,
+            "ghi": 377.4847763546984,
+            "precipitable_water": 25.03323244507684,
+            "precipitation_rate": 0.13563498271909863,
+            "relative_humidity": 84.71957336304484,
+            "wind_direction_10m": 110.82702665200799,
+            "wind_speed_10m": 0.8788325958702397
+        },
+        "2025-02-03 13:20:00+00:00": {
+            "air_temp": 18.060308171892828,
+            "ghi": 392.28143946285496,
+            "precipitable_water": 25.027729725792213,
+            "precipitation_rate": 0.1350654958576304,
+            "relative_humidity": 84.0201235959687,
+            "wind_direction_10m": 111.72061574749785,
+            "wind_speed_10m": 0.8832221829665187
+        },
+        "2025-02-03 13:25:00+00:00": {
+            "air_temp": 18.218424369640353,
+            "ghi": 407.0781025710116,
+            "precipitable_water": 25.022227006507585,
+            "precipitation_rate": 0.13449600899616215,
+            "relative_humidity": 83.32067382889257,
+            "wind_direction_10m": 112.61420484298769,
+            "wind_speed_10m": 0.8876117700627977
+        },
+        "2025-02-03 13:30:00+00:00": {
+            "air_temp": 18.376540567387874,
+            "ghi": 421.87476567916815,
+            "precipitable_water": 25.016724287222956,
+            "precipitation_rate": 0.13392652213469391,
+            "relative_humidity": 82.62122406181643,
+            "wind_direction_10m": 113.50779393847753,
+            "wind_speed_10m": 0.8920013571590768
+        },
+        "2025-02-03 13:35:00+00:00": {
+            "air_temp": 18.534656765135395,
+            "ghi": 436.67142878732477,
+            "precipitable_water": 25.011221567938332,
+            "precipitation_rate": 0.13335703527322568,
+            "relative_humidity": 81.92177429474029,
+            "wind_direction_10m": 114.40138303396739,
+            "wind_speed_10m": 0.8963909442553558
+        },
+        "2025-02-03 13:40:00+00:00": {
+            "air_temp": 18.69277296288292,
+            "ghi": 451.4680918954813,
+            "precipitable_water": 25.005718848653704,
+            "precipitation_rate": 0.13278754841175744,
+            "relative_humidity": 81.22232452766416,
+            "wind_direction_10m": 115.29497212945724,
+            "wind_speed_10m": 0.9007805313516348
+        },
+        "2025-02-03 13:45:00+00:00": {
+            "air_temp": 18.850889160630445,
+            "ghi": 466.2647550036379,
+            "precipitable_water": 25.000216129369075,
+            "precipitation_rate": 0.1322180615502892,
+            "relative_humidity": 80.52287476058801,
+            "wind_direction_10m": 116.1885612249471,
+            "wind_speed_10m": 0.9051701184479138
+        },
+        "2025-02-03 13:50:00+00:00": {
+            "air_temp": 19.009005358377966,
+            "ghi": 481.0614181117945,
+            "precipitable_water": 24.99471341008445,
+            "precipitation_rate": 0.13164857468882096,
+            "relative_humidity": 79.82342499351188,
+            "wind_direction_10m": 117.08215032043694,
+            "wind_speed_10m": 0.9095597055441929
+        },
+        "2025-02-03 13:55:00+00:00": {
+            "air_temp": 19.167121556125487,
+            "ghi": 495.85808121995103,
+            "precipitable_water": 24.989210690799823,
+            "precipitation_rate": 0.13107908782735272,
+            "relative_humidity": 79.12397522643573,
+            "wind_direction_10m": 117.9757394159268,
+            "wind_speed_10m": 0.913949292640472
+        },
+        "2025-02-03 14:00:00+00:00": {
+            "air_temp": 19.32523775387301,
+            "ghi": 510.65474432810765,
+            "precipitable_water": 24.983707971515194,
+            "precipitation_rate": 0.1305096009658845,
+            "relative_humidity": 78.4245254593596,
+            "wind_direction_10m": 118.86932851141664,
+            "wind_speed_10m": 0.918338879736751
+        },
+        "2025-02-03 14:05:00+00:00": {
+            "air_temp": 19.433761562756242,
+            "ghi": 520.3714439283241,
+            "precipitable_water": 25.000154400477026,
+            "precipitation_rate": 0.13660854242590148,
+            "relative_humidity": 77.98149079118754,
+            "wind_direction_10m": 119.4790921701864,
+            "wind_speed_10m": 0.9243470991391725
+        },
+        "2025-02-03 14:10:00+00:00": {
+            "air_temp": 19.542285371639476,
+            "ghi": 530.0881435285405,
+            "precipitable_water": 25.016600829438858,
+            "precipitation_rate": 0.14270748388591845,
+            "relative_humidity": 77.53845612301548,
+            "wind_direction_10m": 120.08885582895617,
+            "wind_speed_10m": 0.9303553185415939
+        },
+        "2025-02-03 14:15:00+00:00": {
+            "air_temp": 19.650809180522707,
+            "ghi": 539.804843128757,
+            "precipitable_water": 25.03304725840069,
+            "precipitation_rate": 0.14880642534593544,
+            "relative_humidity": 77.09542145484342,
+            "wind_direction_10m": 120.69861948772594,
+            "wind_speed_10m": 0.9363635379440154
+        },
+        "2025-02-03 14:20:00+00:00": {
+            "air_temp": 19.75933298940594,
+            "ghi": 549.5215427289735,
+            "precipitable_water": 25.04949368736252,
+            "precipitation_rate": 0.1549053668059524,
+            "relative_humidity": 76.65238678667136,
+            "wind_direction_10m": 121.3083831464957,
+            "wind_speed_10m": 0.9423717573464369
+        },
+        "2025-02-03 14:25:00+00:00": {
+            "air_temp": 19.86785679828917,
+            "ghi": 559.2382423291899,
+            "precipitable_water": 25.065940116324352,
+            "precipitation_rate": 0.1610043082659694,
+            "relative_humidity": 76.2093521184993,
+            "wind_direction_10m": 121.91814680526547,
+            "wind_speed_10m": 0.9483799767488583
+        },
+        "2025-02-03 14:30:00+00:00": {
+            "air_temp": 19.976380607172402,
+            "ghi": 568.9549419294063,
+            "precipitable_water": 25.082386545286184,
+            "precipitation_rate": 0.1671032497259864,
+            "relative_humidity": 75.76631745032724,
+            "wind_direction_10m": 122.52791046403523,
+            "wind_speed_10m": 0.9543881961512799
+        },
+        "2025-02-03 14:35:00+00:00": {
+            "air_temp": 20.084904416055636,
+            "ghi": 578.6716415296228,
+            "precipitable_water": 25.098832974248015,
+            "precipitation_rate": 0.17320219118600336,
+            "relative_humidity": 75.32328278215518,
+            "wind_direction_10m": 123.137674122805,
+            "wind_speed_10m": 0.9603964155537014
+        },
+        "2025-02-03 14:40:00+00:00": {
+            "air_temp": 20.193428224938867,
+            "ghi": 588.3883411298392,
+            "precipitable_water": 25.115279403209847,
+            "precipitation_rate": 0.17930113264602032,
+            "relative_humidity": 74.88024811398311,
+            "wind_direction_10m": 123.74743778157476,
+            "wind_speed_10m": 0.9664046349561228
+        },
+        "2025-02-03 14:45:00+00:00": {
+            "air_temp": 20.3019520338221,
+            "ghi": 598.1050407300556,
+            "precipitable_water": 25.13172583217168,
+            "precipitation_rate": 0.18540007410603732,
+            "relative_humidity": 74.43721344581105,
+            "wind_direction_10m": 124.35720144034453,
+            "wind_speed_10m": 0.9724128543585443
+        },
+        "2025-02-03 14:50:00+00:00": {
+            "air_temp": 20.41047584270533,
+            "ghi": 607.8217403302722,
+            "precipitable_water": 25.14817226113351,
+            "precipitation_rate": 0.1914990155660543,
+            "relative_humidity": 73.994178777639,
+            "wind_direction_10m": 124.96696509911429,
+            "wind_speed_10m": 0.9784210737609658
+        },
+        "2025-02-03 14:55:00+00:00": {
+            "air_temp": 20.518999651588565,
+            "ghi": 617.5384399304886,
+            "precipitable_water": 25.16461869009534,
+            "precipitation_rate": 0.1975979570260713,
+            "relative_humidity": 73.55114410946693,
+            "wind_direction_10m": 125.57672875788406,
+            "wind_speed_10m": 0.9844292931633872
+        },
+        "2025-02-03 15:00:00+00:00": {
+            "air_temp": 20.627523460471796,
+            "ghi": 627.255139530705,
+            "precipitable_water": 25.181065119057173,
+            "precipitation_rate": 0.20369689848608827,
+            "relative_humidity": 73.10810944129487,
+            "wind_direction_10m": 126.18649241665382,
+            "wind_speed_10m": 0.9904375125658087
+        },
+        "2025-02-03 15:05:00+00:00": {
+            "air_temp": 20.728578179074233,
+            "ghi": 637.6023761684878,
+            "precipitable_water": 25.221180276850692,
+            "precipitation_rate": 0.2092810997335574,
+            "relative_humidity": 72.65467116919966,
+            "wind_direction_10m": 126.66697420321526,
+            "wind_speed_10m": 0.9932435526684245
+        },
+        "2025-02-03 15:10:00+00:00": {
+            "air_temp": 20.82963289767667,
+            "ghi": 647.9496128062706,
+            "precipitable_water": 25.26129543464421,
+            "precipitation_rate": 0.21486530098102652,
+            "relative_humidity": 72.20123289710445,
+            "wind_direction_10m": 127.14745598977672,
+            "wind_speed_10m": 0.9960495927710403
+        },
+        "2025-02-03 15:15:00+00:00": {
+            "air_temp": 20.93068761627911,
+            "ghi": 658.2968494440534,
+            "precipitable_water": 25.301410592437733,
+            "precipitation_rate": 0.22044950222849566,
+            "relative_humidity": 71.74779462500923,
+            "wind_direction_10m": 127.62793777633816,
+            "wind_speed_10m": 0.9988556328736561
+        },
+        "2025-02-03 15:20:00+00:00": {
+            "air_temp": 21.031742334881546,
+            "ghi": 668.6440860818361,
+            "precipitable_water": 25.341525750231252,
+            "precipitation_rate": 0.2260337034759648,
+            "relative_humidity": 71.29435635291402,
+            "wind_direction_10m": 128.1084195628996,
+            "wind_speed_10m": 1.001661672976272
+        },
+        "2025-02-03 15:25:00+00:00": {
+            "air_temp": 21.132797053483984,
+            "ghi": 678.9913227196189,
+            "precipitable_water": 25.38164090802477,
+            "precipitation_rate": 0.23161790472343394,
+            "relative_humidity": 70.84091808081881,
+            "wind_direction_10m": 128.58890134946105,
+            "wind_speed_10m": 1.0044677130788877
+        },
+        "2025-02-03 15:30:00+00:00": {
+            "air_temp": 21.233851772086417,
+            "ghi": 689.3385593574017,
+            "precipitable_water": 25.42175606581829,
+            "precipitation_rate": 0.23720210597090308,
+            "relative_humidity": 70.3874798087236,
+            "wind_direction_10m": 129.0693831360225,
+            "wind_speed_10m": 1.0072737531815035
+        },
+        "2025-02-03 15:35:00+00:00": {
+            "air_temp": 21.334906490688855,
+            "ghi": 699.6857959951845,
+            "precipitable_water": 25.46187122361181,
+            "precipitation_rate": 0.2427863072183722,
+            "relative_humidity": 69.93404153662838,
+            "wind_direction_10m": 129.54986492258394,
+            "wind_speed_10m": 1.0100797932841192
+        },
+        "2025-02-03 15:40:00+00:00": {
+            "air_temp": 21.435961209291293,
+            "ghi": 710.0330326329673,
+            "precipitable_water": 25.501986381405327,
+            "precipitation_rate": 0.24837050846584133,
+            "relative_humidity": 69.48060326453317,
+            "wind_direction_10m": 130.0303467091454,
+            "wind_speed_10m": 1.012885833386735
+        },
+        "2025-02-03 15:45:00+00:00": {
+            "air_temp": 21.53701592789373,
+            "ghi": 720.3802692707501,
+            "precipitable_water": 25.542101539198846,
+            "precipitation_rate": 0.25395470971331047,
+            "relative_humidity": 69.02716499243796,
+            "wind_direction_10m": 130.51082849570685,
+            "wind_speed_10m": 1.015691873489351
+        },
+        "2025-02-03 15:50:00+00:00": {
+            "air_temp": 21.638070646496168,
+            "ghi": 730.7275059085329,
+            "precipitable_water": 25.58221669699237,
+            "precipitation_rate": 0.2595389109607796,
+            "relative_humidity": 68.57372672034275,
+            "wind_direction_10m": 130.9913102822683,
+            "wind_speed_10m": 1.0184979135919667
+        },
+        "2025-02-03 15:55:00+00:00": {
+            "air_temp": 21.739125365098605,
+            "ghi": 741.0747425463156,
+            "precipitable_water": 25.622331854785887,
+            "precipitation_rate": 0.26512311220824875,
+            "relative_humidity": 68.12028844824754,
+            "wind_direction_10m": 131.47179206882973,
+            "wind_speed_10m": 1.0213039536945825
+        },
+        "2025-02-03 16:00:00+00:00": {
+            "air_temp": 21.840180083701043,
+            "ghi": 751.4219791840984,
+            "precipitable_water": 25.662447012579406,
+            "precipitation_rate": 0.27070731345571786,
+            "relative_humidity": 67.66685017615232,
+            "wind_direction_10m": 131.95227385539118,
+            "wind_speed_10m": 1.0241099937971982
+        },
+        "2025-02-03 16:05:00+00:00": {
+            "air_temp": 21.944771904806103,
+            "ghi": 753.4234811963463,
+            "precipitable_water": 25.708013399128657,
+            "precipitation_rate": 0.2730302231484254,
+            "relative_humidity": 67.23759010402134,
+            "wind_direction_10m": 132.24838370894895,
+            "wind_speed_10m": 1.0248890378150353
+        },
+        "2025-02-03 16:10:00+00:00": {
+            "air_temp": 22.049363725911167,
+            "ghi": 755.4249832085941,
+            "precipitable_water": 25.753579785677907,
+            "precipitation_rate": 0.27535313284113294,
+            "relative_humidity": 66.80833003189034,
+            "wind_direction_10m": 132.54449356250672,
+            "wind_speed_10m": 1.0256680818328723
+        },
+        "2025-02-03 16:15:00+00:00": {
+            "air_temp": 22.153955547016228,
+            "ghi": 757.426485220842,
+            "precipitable_water": 25.799146172227157,
+            "precipitation_rate": 0.2776760425338405,
+            "relative_humidity": 66.37906995975933,
+            "wind_direction_10m": 132.84060341606448,
+            "wind_speed_10m": 1.0264471258507093
+        },
+        "2025-02-03 16:20:00+00:00": {
+            "air_temp": 22.258547368121288,
+            "ghi": 759.4279872330899,
+            "precipitable_water": 25.844712558776408,
+            "precipitation_rate": 0.2799989522265481,
+            "relative_humidity": 65.94980988762835,
+            "wind_direction_10m": 133.13671326962225,
+            "wind_speed_10m": 1.0272261698685463
+        },
+        "2025-02-03 16:25:00+00:00": {
+            "air_temp": 22.363139189226352,
+            "ghi": 761.4294892453377,
+            "precipitable_water": 25.890278945325658,
+            "precipitation_rate": 0.2823218619192556,
+            "relative_humidity": 65.52054981549736,
+            "wind_direction_10m": 133.43282312318001,
+            "wind_speed_10m": 1.0280052138863833
+        },
+        "2025-02-03 16:30:00+00:00": {
+            "air_temp": 22.467731010331413,
+            "ghi": 763.4309912575856,
+            "precipitable_water": 25.93584533187491,
+            "precipitation_rate": 0.28464477161196317,
+            "relative_humidity": 65.09128974336636,
+            "wind_direction_10m": 133.72893297673778,
+            "wind_speed_10m": 1.0287842579042206
+        },
+        "2025-02-03 16:35:00+00:00": {
+            "air_temp": 22.572322831436473,
+            "ghi": 765.4324932698335,
+            "precipitable_water": 25.981411718424162,
+            "precipitation_rate": 0.2869676813046707,
+            "relative_humidity": 64.66202967123536,
+            "wind_direction_10m": 134.02504283029558,
+            "wind_speed_10m": 1.0295633019220576
+        },
+        "2025-02-03 16:40:00+00:00": {
+            "air_temp": 22.676914652541537,
+            "ghi": 767.4339952820812,
+            "precipitable_water": 26.026978104973413,
+            "precipitation_rate": 0.28929059099737825,
+            "relative_humidity": 64.23276959910437,
+            "wind_direction_10m": 134.32115268385334,
+            "wind_speed_10m": 1.0303423459398946
+        },
+        "2025-02-03 16:45:00+00:00": {
+            "air_temp": 22.781506473646598,
+            "ghi": 769.4354972943291,
+            "precipitable_water": 26.072544491522663,
+            "precipitation_rate": 0.29161350069008585,
+            "relative_humidity": 63.80350952697338,
+            "wind_direction_10m": 134.6172625374111,
+            "wind_speed_10m": 1.0311213899577316
+        },
+        "2025-02-03 16:50:00+00:00": {
+            "air_temp": 22.88609829475166,
+            "ghi": 771.436999306577,
+            "precipitable_water": 26.118110878071914,
+            "precipitation_rate": 0.2939364103827934,
+            "relative_humidity": 63.374249454842385,
+            "wind_direction_10m": 134.91337239096887,
+            "wind_speed_10m": 1.0319004339755686
+        },
+        "2025-02-03 16:55:00+00:00": {
+            "air_temp": 22.990690115856722,
+            "ghi": 773.4385013188248,
+            "precipitable_water": 26.163677264621164,
+            "precipitation_rate": 0.29625932007550093,
+            "relative_humidity": 62.94498938271139,
+            "wind_direction_10m": 135.20948224452664,
+            "wind_speed_10m": 1.0326794779934056
+        },
+        "2025-02-03 17:00:00+00:00": {
+            "air_temp": 23.095281936961783,
+            "ghi": 775.4400033310727,
+            "precipitable_water": 26.209243651170414,
+            "precipitation_rate": 0.2985822297682085,
+            "relative_humidity": 62.5157293105804,
+            "wind_direction_10m": 135.5055920980844,
+            "wind_speed_10m": 1.0334585220112427
+        },
+        "2025-02-03 17:05:00+00:00": {
+            "air_temp": 23.155624139835812,
+            "ghi": 770.5714129939705,
+            "precipitable_water": 26.2403410511009,
+            "precipitation_rate": 0.30742946790383285,
+            "relative_humidity": 62.275641059718005,
+            "wind_direction_10m": 135.40741850822013,
+            "wind_speed_10m": 1.0359554007879512
+        },
+        "2025-02-03 17:10:00+00:00": {
+            "air_temp": 23.21596634270984,
+            "ghi": 765.7028226568683,
+            "precipitable_water": 26.27143845103138,
+            "precipitation_rate": 0.3162767060394573,
+            "relative_humidity": 62.03555280885561,
+            "wind_direction_10m": 135.30924491835583,
+            "wind_speed_10m": 1.0384522795646596
+        },
+        "2025-02-03 17:15:00+00:00": {
+            "air_temp": 23.276308545583873,
+            "ghi": 760.8342323197661,
+            "precipitable_water": 26.302535850961863,
+            "precipitation_rate": 0.32512394417508167,
+            "relative_humidity": 61.79546455799323,
+            "wind_direction_10m": 135.21107132849156,
+            "wind_speed_10m": 1.040949158341368
+        },
+        "2025-02-03 17:20:00+00:00": {
+            "air_temp": 23.336650748457902,
+            "ghi": 755.9656419826639,
+            "precipitable_water": 26.333633250892348,
+            "precipitation_rate": 0.3339711823107061,
+            "relative_humidity": 61.555376307130835,
+            "wind_direction_10m": 135.11289773862728,
+            "wind_speed_10m": 1.0434460371180765
+        },
+        "2025-02-03 17:25:00+00:00": {
+            "air_temp": 23.39699295133193,
+            "ghi": 751.0970516455617,
+            "precipitable_water": 26.364730650822832,
+            "precipitation_rate": 0.3428184204463305,
+            "relative_humidity": 61.31528805626844,
+            "wind_direction_10m": 135.014724148763,
+            "wind_speed_10m": 1.045942915894785
+        },
+        "2025-02-03 17:30:00+00:00": {
+            "air_temp": 23.45733515420596,
+            "ghi": 746.2284613084595,
+            "precipitable_water": 26.395828050753316,
+            "precipitation_rate": 0.35166565858195487,
+            "relative_humidity": 61.07519980540606,
+            "wind_direction_10m": 134.91655055889873,
+            "wind_speed_10m": 1.0484397946714934
+        },
+        "2025-02-03 17:35:00+00:00": {
+            "air_temp": 23.51767735707999,
+            "ghi": 741.3598709713573,
+            "precipitable_water": 26.426925450683797,
+            "precipitation_rate": 0.3605128967175793,
+            "relative_humidity": 60.835111554543666,
+            "wind_direction_10m": 134.81837696903443,
+            "wind_speed_10m": 1.0509366734482017
+        },
+        "2025-02-03 17:40:00+00:00": {
+            "air_temp": 23.57801955995402,
+            "ghi": 736.4912806342551,
+            "precipitable_water": 26.45802285061428,
+            "precipitation_rate": 0.3693601348532037,
+            "relative_humidity": 60.59502330368127,
+            "wind_direction_10m": 134.72020337917016,
+            "wind_speed_10m": 1.0534335522249103
+        },
+        "2025-02-03 17:45:00+00:00": {
+            "air_temp": 23.638361762828048,
+            "ghi": 731.6226902971529,
+            "precipitable_water": 26.489120250544765,
+            "precipitation_rate": 0.3782073729888281,
+            "relative_humidity": 60.35493505281888,
+            "wind_direction_10m": 134.62202978930588,
+            "wind_speed_10m": 1.0559304310016189
+        },
+        "2025-02-03 17:50:00+00:00": {
+            "air_temp": 23.69870396570208,
+            "ghi": 726.7540999600507,
+            "precipitable_water": 26.520217650475246,
+            "precipitation_rate": 0.3870546111244525,
+            "relative_humidity": 60.11484680195649,
+            "wind_direction_10m": 134.52385619944158,
+            "wind_speed_10m": 1.0584273097783272
+        },
+        "2025-02-03 17:55:00+00:00": {
+            "air_temp": 23.75904616857611,
+            "ghi": 721.8855096229485,
+            "precipitable_water": 26.55131505040573,
+            "precipitation_rate": 0.3959018492600769,
+            "relative_humidity": 59.874758551094104,
+            "wind_direction_10m": 134.4256826095773,
+            "wind_speed_10m": 1.0609241885550356
+        },
+        "2025-02-03 18:00:00+00:00": {
+            "air_temp": 23.819388371450138,
+            "ghi": 717.0169192858463,
+            "precipitable_water": 26.582412450336214,
+            "precipitation_rate": 0.4047490873957013,
+            "relative_humidity": 59.63467030023171,
+            "wind_direction_10m": 134.32750901971303,
+            "wind_speed_10m": 1.0634210673317441
+        },
+        "2025-02-03 18:05:00+00:00": {
+            "air_temp": 23.842370929941843,
+            "ghi": 708.2641762282295,
+            "precipitable_water": 26.600820660636252,
+            "precipitation_rate": 0.41575950649007787,
+            "relative_humidity": 59.549071741330074,
+            "wind_direction_10m": 134.069439959938,
+            "wind_speed_10m": 1.0605729093151122
+        },
+        "2025-02-03 18:10:00+00:00": {
+            "air_temp": 23.86535348843355,
+            "ghi": 699.5114331706129,
+            "precipitable_water": 26.619228870936286,
+            "precipitation_rate": 0.4267699255844545,
+            "relative_humidity": 59.46347318242843,
+            "wind_direction_10m": 133.81137090016296,
+            "wind_speed_10m": 1.0577247512984802
+        },
+        "2025-02-03 18:15:00+00:00": {
+            "air_temp": 23.888336046925254,
+            "ghi": 690.7586901129962,
+            "precipitable_water": 26.637637081236324,
+            "precipitation_rate": 0.43778034467883103,
+            "relative_humidity": 59.37787462352679,
+            "wind_direction_10m": 133.55330184038792,
+            "wind_speed_10m": 1.054876593281848
+        },
+        "2025-02-03 18:20:00+00:00": {
+            "air_temp": 23.91131860541696,
+            "ghi": 682.0059470553795,
+            "precipitable_water": 26.656045291536362,
+            "precipitation_rate": 0.44879076377320765,
+            "relative_humidity": 59.29227606462515,
+            "wind_direction_10m": 133.2952327806129,
+            "wind_speed_10m": 1.052028435265216
+        },
+        "2025-02-03 18:25:00+00:00": {
+            "air_temp": 23.934301163908664,
+            "ghi": 673.2532039977629,
+            "precipitable_water": 26.674453501836396,
+            "precipitation_rate": 0.4598011828675842,
+            "relative_humidity": 59.20667750572351,
+            "wind_direction_10m": 133.03716372083787,
+            "wind_speed_10m": 1.049180277248584
+        },
+        "2025-02-03 18:30:00+00:00": {
+            "air_temp": 23.95728372240037,
+            "ghi": 664.5004609401461,
+            "precipitable_water": 26.692861712136434,
+            "precipitation_rate": 0.4708116019619608,
+            "relative_humidity": 59.12107894682187,
+            "wind_direction_10m": 132.77909466106283,
+            "wind_speed_10m": 1.046332119231952
+        },
+        "2025-02-03 18:35:00+00:00": {
+            "air_temp": 23.98026628089207,
+            "ghi": 655.7477178825294,
+            "precipitable_water": 26.711269922436472,
+            "precipitation_rate": 0.48182202105633737,
+            "relative_humidity": 59.03548038792023,
+            "wind_direction_10m": 132.5210256012878,
+            "wind_speed_10m": 1.04348396121532
+        },
+        "2025-02-03 18:40:00+00:00": {
+            "air_temp": 24.003248839383776,
+            "ghi": 646.9949748249128,
+            "precipitable_water": 26.729678132736506,
+            "precipitation_rate": 0.4928324401507139,
+            "relative_humidity": 58.949881829018594,
+            "wind_direction_10m": 132.26295654151275,
+            "wind_speed_10m": 1.040635803198688
+        },
+        "2025-02-03 18:45:00+00:00": {
+            "air_temp": 24.02623139787548,
+            "ghi": 638.2422317672961,
+            "precipitable_water": 26.748086343036544,
+            "precipitation_rate": 0.5038428592450905,
+            "relative_humidity": 58.86428327011695,
+            "wind_direction_10m": 132.00488748173774,
+            "wind_speed_10m": 1.037787645182056
+        },
+        "2025-02-03 18:50:00+00:00": {
+            "air_temp": 24.049213956367186,
+            "ghi": 629.4894887096793,
+            "precipitable_water": 26.76649455333658,
+            "precipitation_rate": 0.5148532783394671,
+            "relative_humidity": 58.77868471121531,
+            "wind_direction_10m": 131.7468184219627,
+            "wind_speed_10m": 1.034939487165424
+        },
+        "2025-02-03 18:55:00+00:00": {
+            "air_temp": 24.07219651485889,
+            "ghi": 620.7367456520627,
+            "precipitable_water": 26.784902763636616,
+            "precipitation_rate": 0.5258636974338436,
+            "relative_humidity": 58.69308615231367,
+            "wind_direction_10m": 131.48874936218766,
+            "wind_speed_10m": 1.0320913291487919
+        },
+        "2025-02-03 19:00:00+00:00": {
+            "air_temp": 24.095179073350597,
+            "ghi": 611.984002594446,
+            "precipitable_water": 26.803310973936654,
+            "precipitation_rate": 0.5368741165282203,
+            "relative_humidity": 58.60748759341203,
+            "wind_direction_10m": 131.23068030241262,
+            "wind_speed_10m": 1.02924317113216
+        },
+        "2025-02-03 19:05:00+00:00": {
+            "air_temp": 24.068018559346307,
+            "ghi": 593.5903000935954,
+            "precipitable_water": 26.822423253469864,
+            "precipitation_rate": 0.5416382917638083,
+            "relative_humidity": 58.637145574928525,
+            "wind_direction_10m": 130.60534718435704,
+            "wind_speed_10m": 1.0239976274589289
+        },
+        "2025-02-03 19:10:00+00:00": {
+            "air_temp": 24.040858045342013,
+            "ghi": 575.1965975927448,
+            "precipitable_water": 26.84153553300307,
+            "precipitation_rate": 0.5464024669993963,
+            "relative_humidity": 58.666803556445025,
+            "wind_direction_10m": 129.98001406630146,
+            "wind_speed_10m": 1.018752083785698
+        },
+        "2025-02-03 19:15:00+00:00": {
+            "air_temp": 24.013697531337723,
+            "ghi": 556.8028950918941,
+            "precipitable_water": 26.860647812536282,
+            "precipitation_rate": 0.5511666422349843,
+            "relative_humidity": 58.696461537961525,
+            "wind_direction_10m": 129.3546809482459,
+            "wind_speed_10m": 1.013506540112467
+        },
+        "2025-02-03 19:20:00+00:00": {
+            "air_temp": 23.986537017333433,
+            "ghi": 538.4091925910435,
+            "precipitable_water": 26.879760092069493,
+            "precipitation_rate": 0.5559308174705723,
+            "relative_humidity": 58.72611951947802,
+            "wind_direction_10m": 128.72934783019033,
+            "wind_speed_10m": 1.008260996439236
+        },
+        "2025-02-03 19:25:00+00:00": {
+            "air_temp": 23.95937650332914,
+            "ghi": 520.0154900901929,
+            "precipitable_water": 26.8988723716027,
+            "precipitation_rate": 0.5606949927061603,
+            "relative_humidity": 58.75577750099451,
+            "wind_direction_10m": 128.10401471213476,
+            "wind_speed_10m": 1.0030154527660051
+        },
+        "2025-02-03 19:30:00+00:00": {
+            "air_temp": 23.93221598932485,
+            "ghi": 501.6217875893423,
+            "precipitable_water": 26.91798465113591,
+            "precipitation_rate": 0.5654591679417483,
+            "relative_humidity": 58.78543548251101,
+            "wind_direction_10m": 127.47868159407919,
+            "wind_speed_10m": 0.9977699090927741
+        },
+        "2025-02-03 19:35:00+00:00": {
+            "air_temp": 23.90505547532056,
+            "ghi": 483.2280850884917,
+            "precipitable_water": 26.93709693066912,
+            "precipitation_rate": 0.5702233431773364,
+            "relative_humidity": 58.81509346402751,
+            "wind_direction_10m": 126.85334847602363,
+            "wind_speed_10m": 0.9925243654195431
+        },
+        "2025-02-03 19:40:00+00:00": {
+            "air_temp": 23.877894961316265,
+            "ghi": 464.83438258764113,
+            "precipitable_water": 26.956209210202328,
+            "precipitation_rate": 0.5749875184129244,
+            "relative_humidity": 58.844751445544006,
+            "wind_direction_10m": 126.22801535796805,
+            "wind_speed_10m": 0.9872788217463121
+        },
+        "2025-02-03 19:45:00+00:00": {
+            "air_temp": 23.850734447311975,
+            "ghi": 446.4406800867905,
+            "precipitable_water": 26.97532148973554,
+            "precipitation_rate": 0.5797516936485123,
+            "relative_humidity": 58.8744094270605,
+            "wind_direction_10m": 125.60268223991247,
+            "wind_speed_10m": 0.9820332780730812
+        },
+        "2025-02-03 19:50:00+00:00": {
+            "air_temp": 23.823573933307685,
+            "ghi": 428.0469775859399,
+            "precipitable_water": 26.99443376926875,
+            "precipitation_rate": 0.5845158688841003,
+            "relative_humidity": 58.904067408577,
+            "wind_direction_10m": 124.9773491218569,
+            "wind_speed_10m": 0.9767877343998502
+        },
+        "2025-02-03 19:55:00+00:00": {
+            "air_temp": 23.79641341930339,
+            "ghi": 409.65327508508926,
+            "precipitable_water": 27.013546048801956,
+            "precipitation_rate": 0.5892800441196884,
+            "relative_humidity": 58.9337253900935,
+            "wind_direction_10m": 124.35201600380134,
+            "wind_speed_10m": 0.9715421907266192
+        },
+        "2025-02-03 20:00:00+00:00": {
+            "air_temp": 23.7692529052991,
+            "ghi": 391.25957258423864,
+            "precipitable_water": 27.032658328335167,
+            "precipitation_rate": 0.5940442193552764,
+            "relative_humidity": 58.96338337160999,
+            "wind_direction_10m": 123.72668288574576,
+            "wind_speed_10m": 0.9662966470533882
+        },
+        "2025-02-03 20:05:00+00:00": {
+            "air_temp": 23.681232868828484,
+            "ghi": 377.13835802259234,
+            "precipitable_water": 26.997531052633146,
+            "precipitation_rate": 0.5757827624894141,
+            "relative_humidity": 59.44789097340825,
+            "wind_direction_10m": 124.59966933313493,
+            "wind_speed_10m": 0.9636389844363583
+        },
+        "2025-02-03 20:10:00+00:00": {
+            "air_temp": 23.593212832357864,
+            "ghi": 363.01714346094604,
+            "precipitable_water": 26.962403776931126,
+            "precipitation_rate": 0.5575213056235517,
+            "relative_humidity": 59.93239857520651,
+            "wind_direction_10m": 125.47265578052408,
+            "wind_speed_10m": 0.9609813218193285
+        },
+        "2025-02-03 20:15:00+00:00": {
+            "air_temp": 23.505192795887247,
+            "ghi": 348.89592889929975,
+            "precipitable_water": 26.927276501229105,
+            "precipitation_rate": 0.5392598487576893,
+            "relative_humidity": 60.41690617700477,
+            "wind_direction_10m": 126.34564222791323,
+            "wind_speed_10m": 0.9583236592022986
+        },
+        "2025-02-03 20:20:00+00:00": {
+            "air_temp": 23.417172759416626,
+            "ghi": 334.77471433765345,
+            "precipitable_water": 26.892149225527085,
+            "precipitation_rate": 0.520998391891827,
+            "relative_humidity": 60.901413778803025,
+            "wind_direction_10m": 127.2186286753024,
+            "wind_speed_10m": 0.9556659965852686
+        },
+        "2025-02-03 20:25:00+00:00": {
+            "air_temp": 23.32915272294601,
+            "ghi": 320.65349977600715,
+            "precipitable_water": 26.857021949825064,
+            "precipitation_rate": 0.5027369350259646,
+            "relative_humidity": 61.38592138060129,
+            "wind_direction_10m": 128.09161512269156,
+            "wind_speed_10m": 0.9530083339682388
+        },
+        "2025-02-03 20:30:00+00:00": {
+            "air_temp": 23.24113268647539,
+            "ghi": 306.53228521436085,
+            "precipitable_water": 26.821894674123044,
+            "precipitation_rate": 0.4844754781601022,
+            "relative_humidity": 61.870428982399545,
+            "wind_direction_10m": 128.96460157008073,
+            "wind_speed_10m": 0.9503506713512089
+        },
+        "2025-02-03 20:35:00+00:00": {
+            "air_temp": 23.153112650004772,
+            "ghi": 292.41107065271456,
+            "precipitable_water": 26.78676739842102,
+            "precipitation_rate": 0.46621402129423983,
+            "relative_humidity": 62.3549365841978,
+            "wind_direction_10m": 129.83758801746987,
+            "wind_speed_10m": 0.9476930087341789
+        },
+        "2025-02-03 20:40:00+00:00": {
+            "air_temp": 23.065092613534155,
+            "ghi": 278.28985609106826,
+            "precipitable_water": 26.751640122719,
+            "precipitation_rate": 0.4479525644283775,
+            "relative_humidity": 62.839444185996065,
+            "wind_direction_10m": 130.71057446485904,
+            "wind_speed_10m": 0.9450353461171491
+        },
+        "2025-02-03 20:45:00+00:00": {
+            "air_temp": 22.977072577063534,
+            "ghi": 264.16864152942196,
+            "precipitable_water": 26.71651284701698,
+            "precipitation_rate": 0.42969110756251516,
+            "relative_humidity": 63.32395178779432,
+            "wind_direction_10m": 131.5835609122482,
+            "wind_speed_10m": 0.9423776835001192
+        },
+        "2025-02-03 20:50:00+00:00": {
+            "air_temp": 22.889052540592917,
+            "ghi": 250.0474269677757,
+            "precipitable_water": 26.68138557131496,
+            "precipitation_rate": 0.41142965069665277,
+            "relative_humidity": 63.80845938959258,
+            "wind_direction_10m": 132.45654735963734,
+            "wind_speed_10m": 0.9397200208830893
+        },
+        "2025-02-03 20:55:00+00:00": {
+            "air_temp": 22.801032504122297,
+            "ghi": 235.9262124061294,
+            "precipitable_water": 26.646258295612938,
+            "precipitation_rate": 0.3931681938307904,
+            "relative_humidity": 64.29296699139084,
+            "wind_direction_10m": 133.3295338070265,
+            "wind_speed_10m": 0.9370623582660594
+        },
+        "2025-02-03 21:00:00+00:00": {
+            "air_temp": 22.71301246765168,
+            "ghi": 221.8049978444831,
+            "precipitable_water": 26.611131019910918,
+            "precipitation_rate": 0.37490673696492804,
+            "relative_humidity": 64.7774745931891,
+            "wind_direction_10m": 134.20252025441567,
+            "wind_speed_10m": 0.9344046956490295
+        },
+        "2025-02-03 21:05:00+00:00": {
+            "air_temp": 22.567934787243424,
+            "ghi": 208.88610482465353,
+            "precipitable_water": 26.562367662279296,
+            "precipitation_rate": 0.3579128831791445,
+            "relative_humidity": 65.58412846472467,
+            "wind_direction_10m": 134.90683574880265,
+            "wind_speed_10m": 0.926676976674204
+        },
+        "2025-02-03 21:10:00+00:00": {
+            "air_temp": 22.42285710683517,
+            "ghi": 195.96721180482396,
+            "precipitable_water": 26.51360430464767,
+            "precipitation_rate": 0.340919029393361,
+            "relative_humidity": 66.39078233626026,
+            "wind_direction_10m": 135.61115124318962,
+            "wind_speed_10m": 0.9189492576993786
+        },
+        "2025-02-03 21:15:00+00:00": {
+            "air_temp": 22.277779426426914,
+            "ghi": 183.04831878499442,
+            "precipitable_water": 26.46484094701605,
+            "precipitation_rate": 0.32392517560757744,
+            "relative_humidity": 67.19743620779585,
+            "wind_direction_10m": 136.3154667375766,
+            "wind_speed_10m": 0.9112215387245531
+        },
+        "2025-02-03 21:20:00+00:00": {
+            "air_temp": 22.132701746018657,
+            "ghi": 170.12942576516485,
+            "precipitable_water": 26.41607758938443,
+            "precipitation_rate": 0.30693132182179395,
+            "relative_humidity": 68.00409007933142,
+            "wind_direction_10m": 137.01978223196357,
+            "wind_speed_10m": 0.9034938197497276
+        },
+        "2025-02-03 21:25:00+00:00": {
+            "air_temp": 21.987624065610405,
+            "ghi": 157.21053274533529,
+            "precipitable_water": 26.367314231752804,
+            "precipitation_rate": 0.2899374680360104,
+            "relative_humidity": 68.81074395086699,
+            "wind_direction_10m": 137.72409772635055,
+            "wind_speed_10m": 0.8957661007749023
+        },
+        "2025-02-03 21:30:00+00:00": {
+            "air_temp": 21.842546385202148,
+            "ghi": 144.29163972550572,
+            "precipitable_water": 26.318550874121183,
+            "precipitation_rate": 0.27294361425022684,
+            "relative_humidity": 69.61739782240258,
+            "wind_direction_10m": 138.42841322073753,
+            "wind_speed_10m": 0.8880383818000768
+        },
+        "2025-02-03 21:35:00+00:00": {
+            "air_temp": 21.69746870479389,
+            "ghi": 131.37274670567615,
+            "precipitable_water": 26.26978751648956,
+            "precipitation_rate": 0.2559497604644433,
+            "relative_humidity": 70.42405169393817,
+            "wind_direction_10m": 139.1327287151245,
+            "wind_speed_10m": 0.8803106628252513
+        },
+        "2025-02-03 21:40:00+00:00": {
+            "air_temp": 21.55239102438564,
+            "ghi": 118.4538536858466,
+            "precipitable_water": 26.221024158857936,
+            "precipitation_rate": 0.2389559066786598,
+            "relative_humidity": 71.23070556547374,
+            "wind_direction_10m": 139.83704420951148,
+            "wind_speed_10m": 0.8725829438504259
+        },
+        "2025-02-03 21:45:00+00:00": {
+            "air_temp": 21.407313343977382,
+            "ghi": 105.53496066601703,
+            "precipitable_water": 26.172260801226315,
+            "precipitation_rate": 0.22196205289287627,
+            "relative_humidity": 72.03735943700931,
+            "wind_direction_10m": 140.54135970389845,
+            "wind_speed_10m": 0.8648552248756004
+        },
+        "2025-02-03 21:50:00+00:00": {
+            "air_temp": 21.262235663569125,
+            "ghi": 92.61606764618745,
+            "precipitable_water": 26.123497443594694,
+            "precipitation_rate": 0.2049681991070927,
+            "relative_humidity": 72.8440133085449,
+            "wind_direction_10m": 141.24567519828543,
+            "wind_speed_10m": 0.8571275059007749
+        },
+        "2025-02-03 21:55:00+00:00": {
+            "air_temp": 21.117157983160872,
+            "ghi": 79.6971746263579,
+            "precipitable_water": 26.07473408596307,
+            "precipitation_rate": 0.18797434532130922,
+            "relative_humidity": 73.65066718008049,
+            "wind_direction_10m": 141.9499906926724,
+            "wind_speed_10m": 0.8493997869259495
+        },
+        "2025-02-03 22:00:00+00:00": {
+            "air_temp": 20.972080302752616,
+            "ghi": 66.77828160652834,
+            "precipitable_water": 26.025970728331448,
+            "precipitation_rate": 0.17098049153552566,
+            "relative_humidity": 74.45732105161606,
+            "wind_direction_10m": 142.65430618705938,
+            "wind_speed_10m": 0.841672067951124
+        },
+        "2025-02-03 22:05:00+00:00": {
+            "air_temp": 20.895226000341232,
+            "ghi": 61.38729236565454,
+            "precipitable_water": 26.055604807009896,
+            "precipitation_rate": 0.17001135494177042,
+            "relative_humidity": 74.79453679349378,
+            "wind_direction_10m": 142.75098784679562,
+            "wind_speed_10m": 0.8289907902720544
+        },
+        "2025-02-03 22:10:00+00:00": {
+            "air_temp": 20.81837169792985,
+            "ghi": 55.99630312478074,
+            "precipitable_water": 26.085238885688344,
+            "precipitation_rate": 0.16904221834801517,
+            "relative_humidity": 75.13175253537149,
+            "wind_direction_10m": 142.84766950653187,
+            "wind_speed_10m": 0.8163095125929848
+        },
+        "2025-02-03 22:15:00+00:00": {
+            "air_temp": 20.741517395518468,
+            "ghi": 50.60531388390694,
+            "precipitable_water": 26.114872964366793,
+            "precipitation_rate": 0.16807308175425992,
+            "relative_humidity": 75.46896827724922,
+            "wind_direction_10m": 142.94435116626812,
+            "wind_speed_10m": 0.8036282349139152
+        },
+        "2025-02-03 22:20:00+00:00": {
+            "air_temp": 20.664663093107087,
+            "ghi": 45.21432464303314,
+            "precipitable_water": 26.14450704304524,
+            "precipitation_rate": 0.16710394516050467,
+            "relative_humidity": 75.80618401912693,
+            "wind_direction_10m": 143.04103282600437,
+            "wind_speed_10m": 0.7909469572348455
+        },
+        "2025-02-03 22:25:00+00:00": {
+            "air_temp": 20.587808790695703,
+            "ghi": 39.82333540215934,
+            "precipitable_water": 26.17414112172369,
+            "precipitation_rate": 0.16613480856674942,
+            "relative_humidity": 76.14339976100464,
+            "wind_direction_10m": 143.13771448574062,
+            "wind_speed_10m": 0.7782656795557759
+        },
+        "2025-02-03 22:30:00+00:00": {
+            "air_temp": 20.51095448828432,
+            "ghi": 34.43234616128554,
+            "precipitable_water": 26.203775200402134,
+            "precipitation_rate": 0.1651656719729942,
+            "relative_humidity": 76.48061550288236,
+            "wind_direction_10m": 143.23439614547686,
+            "wind_speed_10m": 0.7655844018767063
+        },
+        "2025-02-03 22:35:00+00:00": {
+            "air_temp": 20.43410018587294,
+            "ghi": 29.041356920411737,
+            "precipitable_water": 26.233409279080583,
+            "precipitation_rate": 0.16419653537923895,
+            "relative_humidity": 76.81783124476007,
+            "wind_direction_10m": 143.33107780521308,
+            "wind_speed_10m": 0.7529031241976367
+        },
+        "2025-02-03 22:40:00+00:00": {
+            "air_temp": 20.357245883461555,
+            "ghi": 23.650367679537936,
+            "precipitable_water": 26.26304335775903,
+            "precipitation_rate": 0.1632273987854837,
+            "relative_humidity": 77.15504698663779,
+            "wind_direction_10m": 143.42775946494933,
+            "wind_speed_10m": 0.740221846518567
+        },
+        "2025-02-03 22:45:00+00:00": {
+            "air_temp": 20.280391581050175,
+            "ghi": 18.259378438664136,
+            "precipitable_water": 26.29267743643748,
+            "precipitation_rate": 0.16225826219172845,
+            "relative_humidity": 77.4922627285155,
+            "wind_direction_10m": 143.52444112468558,
+            "wind_speed_10m": 0.7275405688394974
+        },
+        "2025-02-03 22:50:00+00:00": {
+            "air_temp": 20.20353727863879,
+            "ghi": 12.868389197790336,
+            "precipitable_water": 26.322311515115928,
+            "precipitation_rate": 0.1612891255979732,
+            "relative_humidity": 77.82947847039323,
+            "wind_direction_10m": 143.62112278442183,
+            "wind_speed_10m": 0.7148592911604278
+        },
+        "2025-02-03 22:55:00+00:00": {
+            "air_temp": 20.12668297622741,
+            "ghi": 7.4773999569165355,
+            "precipitable_water": 26.351945593794376,
+            "precipitation_rate": 0.16031998900421796,
+            "relative_humidity": 78.16669421227094,
+            "wind_direction_10m": 143.71780444415808,
+            "wind_speed_10m": 0.7021780134813582
+        },
+        "2025-02-03 23:00:00+00:00": {
+            "air_temp": 20.049828673816027,
+            "ghi": 2.0864107160427343,
+            "precipitable_water": 26.381579672472824,
+            "precipitation_rate": 0.1593508524104627,
+            "relative_humidity": 78.50390995414865,
+            "wind_direction_10m": 143.81448610389432,
+            "wind_speed_10m": 0.6894967358022885
+        },
+        "2025-02-03 23:05:00+00:00": {
+            "air_temp": 19.968808774148755,
+            "ghi": 1.9125431563725064,
+            "precipitable_water": 26.38292092378916,
+            "precipitation_rate": 0.1573687223364194,
+            "relative_humidity": 78.65656492906618,
+            "wind_direction_10m": 142.5553873964409,
+            "wind_speed_10m": 0.6904726501598496
+        },
+        "2025-02-03 23:10:00+00:00": {
+            "air_temp": 19.887788874481487,
+            "ghi": 1.7386755967022787,
+            "precipitable_water": 26.384262175105498,
+            "precipitation_rate": 0.15538659226237614,
+            "relative_humidity": 78.80921990398369,
+            "wind_direction_10m": 141.29628868898746,
+            "wind_speed_10m": 0.6914485645174107
+        },
+        "2025-02-03 23:15:00+00:00": {
+            "air_temp": 19.806768974814215,
+            "ghi": 1.5648080370320507,
+            "precipitable_water": 26.385603426421834,
+            "precipitation_rate": 0.15340446218833284,
+            "relative_humidity": 78.96187487890121,
+            "wind_direction_10m": 140.03718998153403,
+            "wind_speed_10m": 0.6924244788749716
+        },
+        "2025-02-03 23:20:00+00:00": {
+            "air_temp": 19.725749075146947,
+            "ghi": 1.390940477361823,
+            "precipitable_water": 26.38694467773817,
+            "precipitation_rate": 0.15142233211428957,
+            "relative_humidity": 79.11452985381874,
+            "wind_direction_10m": 138.77809127408057,
+            "wind_speed_10m": 0.6934003932325327
+        },
+        "2025-02-03 23:25:00+00:00": {
+            "air_temp": 19.644729175479675,
+            "ghi": 1.217072917691595,
+            "precipitable_water": 26.388285929054508,
+            "precipitation_rate": 0.14944020204024627,
+            "relative_humidity": 79.26718482873626,
+            "wind_direction_10m": 137.51899256662713,
+            "wind_speed_10m": 0.6943763075900937
+        },
+        "2025-02-03 23:30:00+00:00": {
+            "air_temp": 19.563709275812407,
+            "ghi": 1.0432053580213672,
+            "precipitable_water": 26.389627180370844,
+            "precipitation_rate": 0.14745807196620297,
+            "relative_humidity": 79.41983980365379,
+            "wind_direction_10m": 136.2598938591737,
+            "wind_speed_10m": 0.6953522219476548
+        },
+        "2025-02-03 23:35:00+00:00": {
+            "air_temp": 19.482689376145135,
+            "ghi": 0.8693377983511392,
+            "precipitable_water": 26.390968431687178,
+            "precipitation_rate": 0.1454759418921597,
+            "relative_humidity": 79.5724947785713,
+            "wind_direction_10m": 135.00079515172027,
+            "wind_speed_10m": 0.6963281363052158
+        },
+        "2025-02-03 23:40:00+00:00": {
+            "air_temp": 19.401669476477863,
+            "ghi": 0.6954702386809115,
+            "precipitable_water": 26.392309683003514,
+            "precipitation_rate": 0.1434938118181164,
+            "relative_humidity": 79.72514975348882,
+            "wind_direction_10m": 133.74169644426684,
+            "wind_speed_10m": 0.6973040506627769
+        },
+        "2025-02-03 23:45:00+00:00": {
+            "air_temp": 19.320649576810595,
+            "ghi": 0.5216026790106836,
+            "precipitable_water": 26.39365093431985,
+            "precipitation_rate": 0.14151168174407314,
+            "relative_humidity": 79.87780472840635,
+            "wind_direction_10m": 132.48259773681337,
+            "wind_speed_10m": 0.698279965020338
+        },
+        "2025-02-03 23:50:00+00:00": {
+            "air_temp": 19.239629677143324,
+            "ghi": 0.34773511934045565,
+            "precipitable_water": 26.394992185636188,
+            "precipitation_rate": 0.13952955167002984,
+            "relative_humidity": 80.03045970332386,
+            "wind_direction_10m": 131.22349902935994,
+            "wind_speed_10m": 0.6992558793778989
+        },
+        "2025-02-03 23:55:00+00:00": {
+            "air_temp": 19.158609777476055,
+            "ghi": 0.17386755967022793,
+            "precipitable_water": 26.396333436952524,
+            "precipitation_rate": 0.13754742159598657,
+            "relative_humidity": 80.18311467824138,
+            "wind_direction_10m": 129.9644003219065,
+            "wind_speed_10m": 0.70023179373546
+        },
+        "2025-02-04 00:00:00+00:00": {
+            "air_temp": 19.077589877808784,
+            "ghi": 0.0,
+            "precipitable_water": 26.39767468826886,
+            "precipitation_rate": 0.13556529152194327,
+            "relative_humidity": 80.3357696531589,
+            "wind_direction_10m": 128.70530161445308,
+            "wind_speed_10m": 0.701207708093021
+        }
+    }
+}
