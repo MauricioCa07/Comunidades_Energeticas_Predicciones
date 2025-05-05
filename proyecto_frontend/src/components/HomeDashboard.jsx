@@ -1,10 +1,7 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { SunIcon, LightningBoltIcon } from '@heroicons/react/outline';
+import { SunIcon, LightningBoltIcon,BookOpenIcon } from '@heroicons/react/outline';
 
-/**
- * Componente Card unificado con estilo visual mejorado
- */
 const Card = memo(({ to, icon: Icon, title, description }) => (
   <Link
     to={to}
@@ -34,15 +31,12 @@ const Card = memo(({ to, icon: Icon, title, description }) => (
   </Link>
 ));
 
-/**
- * Home page: sección de selección de predicciones con bolitas decorativas
- */
+
 const Home = memo(() => (
   <div className="
     relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-200
     p-6 overflow-hidden flex flex-col items-center justify-center
   ">
-    {/* Bolitas decorativas superior */}
     <div className="absolute top-0 left-0 w-full h-32 overflow-visible pointer-events-none">
       <div className="absolute -top-12 -left-16 w-48 h-48 bg-orange-400 rounded-full opacity-30" />
       <div className="absolute -top-8 left-1/4 w-64 h-64 bg-orange-600 rounded-full opacity-30" />
@@ -73,7 +67,15 @@ const Home = memo(() => (
           title="Energía"
           description="Consumo y predicciones energéticas"
         />
+
+        <Card
+          to="/manual"
+          icon={BookOpenIcon}
+          title="Manual de usuario"
+          description="Manual para cada una de las cosas"
+        />
       </div>
+      
     </div>
   </div>
 ));

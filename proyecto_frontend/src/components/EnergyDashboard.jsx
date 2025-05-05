@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './EnergyDashboard.css';
 import InfoTooltip from './InfoTooltip.jsx';
 import {XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { BarChart2, Home, Battery } from 'lucide-react';
+import * as XLSX from 'xlsx'; 
+import { saveAs } from 'file-saver';
 
 function EnergyDashboard() {
   const [predictionData, setPredictionData] = useState([]);
@@ -87,6 +89,63 @@ function EnergyDashboard() {
         setDetailedChartData([]);
     }
   }, [predictionData, actualConsumption]);
+
+  const handleExportExcel = useCallback(() => {
+    if (!detailedChartData || detailedChartData.length === 0) {
+      alert("No hay datos detallados para exportar.");
+      return;
+    }
+
+    const sheetName = "Consumo_Detallado";
+    const filename = `reporte_consumo_energetico_${Date.now()}.xlsx`; // Agrega timestamp para unicidad
+
+    const headers = [
+      'Hora',
+      'Pronosticado (kWh)',
+      'Real (kWh)',
+      'Diferencia (kWh)'
+    ];
+
+  
+    const dataToExport = detailedChartData.map(item => {
+        const predicted = item.predicted ?? 0; 
+        const actual = item.actual ?? 0;     
+        const difference = predicted - actual;
+        return {
+            'Hora': item.time,
+            'Pronosticado (kWh)': predicted, 
+            'Real (kWh)': actual,           
+            'Diferencia (kWh)': difference      
+        };
+    });
+
+
+    const wsData = [headers]; 
+    dataToExport.forEach(row => {
+      const rowValues = headers.map(header => row[header]);
+      wsData.push(rowValues);
+    });
+
+    const ws = XLSX.utils.aoa_to_sheet(wsData);
+
+
+    const cols = headers.map(header => ({
+        wch: Math.max(header.length, 15) 
+    }));
+    ws['!cols'] = cols; 
+
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, sheetName);
+
+    const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+
+    const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8' });
+
+    saveAs(blob, filename);
+
+  }, [detailedChartData]);
+
 
   const { totalConsumption, totalPrediction, avgConsumption, avgPrediction, efficiency } = React.useMemo(() => {
     const tc = actualConsumption.reduce((sum, val) => sum + (val || 0), 0);
@@ -449,12 +508,31 @@ function EnergyDashboard() {
               </div>
             </div>
 
+
+            <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px 20px', borderBottom: '1px solid #eee' }}>
+              <button
+                onClick={handleExportExcel}
+                disabled={detailedChartData.length === 0 || isLoading} // Deshabilitado si no hay datos o está cargando
+                className="export-button" // Puedes usar la misma clase o una nueva
+                style={{ padding: '8px 15px', cursor: 'pointer' }}
+                aria-label="Exportar datos detallados a Excel"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style={{ marginRight: '5px', verticalAlign: 'middle' }}>
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                Exportar Detalles a Excel
+              </button>
+            </div>
+
             <div className="tab-content">
               {renderContent()}
+              
             </div>
           </>
         )}
       </div>
+
 
       <div className="bottom-nav">
         <Link to="/" className="nav-item active">
