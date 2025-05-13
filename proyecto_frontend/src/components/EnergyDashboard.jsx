@@ -26,7 +26,7 @@ function EnergyDashboard() {
 
         const dummyInputs = randomConsumption.slice(0, 47);
 
-        const response = await fetch('http://localhost:8000/predict/com', {
+        const response = await fetch('http://127.0.0.1:5000/predict/com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function EnergyDashboard() {
     }
 
     const sheetName = "Consumo_Detallado";
-    const filename = `reporte_consumo_energetico_${Date.now()}.xlsx`; // Agrega timestamp para unicidad
+    const filename = `reporte_consumo_energetico_${Date.now()}.xlsx`; 
 
     const headers = [
       'Hora',
@@ -512,8 +512,8 @@ function EnergyDashboard() {
             <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px 20px', borderBottom: '1px solid #eee' }}>
               <button
                 onClick={handleExportExcel}
-                disabled={detailedChartData.length === 0 || isLoading} // Deshabilitado si no hay datos o está cargando
-                className="export-button" // Puedes usar la misma clase o una nueva
+                disabled={detailedChartData.length === 0 || isLoading} 
+                className="export-button" 
                 style={{ padding: '8px 15px', cursor: 'pointer' }}
                 aria-label="Exportar datos detallados a Excel"
               >

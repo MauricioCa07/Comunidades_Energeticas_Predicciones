@@ -7,7 +7,7 @@ from tensorflow.keras.metrics import RootMeanSquaredError
 from tensorflow.keras.optimizers import Adam
 from utilities import mv, rename_model, set_enviroment_var, get_enviroment_var
 
-project_path = "/home/laptop1/Desktop/codes/proyecto_p2/"
+project_path = "/app/"
 df_position = project_path + "models_media/processed_datasets/"
 past_models = project_path + "past_models/"
 

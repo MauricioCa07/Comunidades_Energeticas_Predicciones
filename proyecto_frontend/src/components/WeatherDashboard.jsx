@@ -11,34 +11,34 @@ import {
   Area,
   ResponsiveContainer
 } from 'recharts';
-import './WeatherDashboard.css'; // Asegúrate que la ruta es correcta
-import InfoTooltip from './InfoTooltip'; // Importamos el componente de Tooltip
-import { Link } from 'react-router-dom'; // Asumiendo que usas react-router
+import './WeatherDashboard.css'; 
+import InfoTooltip from './InfoTooltip'; 
+import { Link } from 'react-router-dom'; 
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import { BarChart2, Home, Battery } from 'lucide-react';
 
 function WeatherDashboard() {
-  const [fullDayData, setFullDayData] = useState([]); // Todos los datos inventados para el día
-  const [predictionData, setPredictionData] = useState([]); // Datos filtrados y con generación calculada
+  const [fullDayData, setFullDayData] = useState([]); 
+  const [predictionData, setPredictionData] = useState([]); 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeTab, setActiveTab] = useState('prediction'); // Estado para la navegación entre tabs
+  const [activeTab, setActiveTab] = useState('prediction'); 
 
-  // Estados para el rango de intervalos a mostrar
+  
   const [startInterval, setStartInterval] = useState(1);
-  const [endInterval, setEndInterval] = useState(288); // 288 intervalos en 24 horas
+  const [endInterval, setEndInterval] = useState(288); 
 
-  // Parámetros del sistema solar fotovoltaico
+  
   const [solarSystemParams, setSolarSystemParams] = useState({
-    capacity: 5, // Capacidad instalada en kW
-    efficiency: 0.18, // Eficiencia de los paneles (18%)
-    area: 30, // Área total de paneles en m²
-    tilt: 15, // Inclinación de los paneles en grados
-    azimuth: 180, // Orientación (180° = sur)
+    capacity: 5, 
+    efficiency: 0.18, 
+    area: 30, 
+    tilt: 15, 
+    azimuth: 180, 
   });
 
-  // Define las claves que se esperan, en el mismo orden que el backend (o la generación simulada)
+  
   const targetVars = [
     'air_temp',
     'ghi',
@@ -49,7 +49,6 @@ function WeatherDashboard() {
     'wind_speed_10m'
   ];
 
-  // Etiquetas para mostrar en los controles y tablas
   const varLabels = {
     'air_temp': 'Temperatura (°C)',
     'ghi': 'Radiación (W/m²)',
@@ -60,9 +59,7 @@ function WeatherDashboard() {
     'wind_speed_10m': 'Velocidad Viento (m/s)'
   };
 
-  // --- Funciones de Cálculo y Generación de Datos (sin cambios) ---
-
-  // Función para calcular la generación de energía solar basada en los datos meteorológicos
+  
   function calculateSolarGeneration(weatherData) {
     if (!weatherData || weatherData.length === 0) return [];
 
@@ -71,7 +68,7 @@ function WeatherDashboard() {
       const [hour, minute] = data.timeLabel.split(':').map(n => parseInt(n));
       const decimalHour = hour + minute / 60;
       const solarAngleFactor = calculateSolarAngleFactor(decimalHour, solarSystemParams.tilt);
-      const cloudFactor = 1 - (data.precipitable_water / 50); // Simplificación
+      const cloudFactor = 1 - (data.precipitable_water / 50); 
       const rainFactor = data.precipitation_rate > 0 ? 0.8 : 1;
 
       let power = (data.ghi / 1000) *
@@ -87,13 +84,13 @@ function WeatherDashboard() {
 
       return {
         ...data,
-        solarPower: power, // Potencia en kW
-        powerFactor: parseFloat((power / solarSystemParams.capacity * 100).toFixed(1)) // Factor de capacidad en %
+        solarPower: power, 
+        powerFactor: parseFloat((power / solarSystemParams.capacity * 100).toFixed(1)) 
       };
     });
   }
 
-  // Calcula el factor de ángulo solar basado en la hora y la inclinación
+
   function calculateSolarAngleFactor(hour, tilt) {
     if (hour >= 10 && hour <= 14) {
       return 0.9 + (tilt / 100);
@@ -106,7 +103,6 @@ function WeatherDashboard() {
     }
   }
 
-  // Función para generar datos simulados para todo el día
   function generateFullDayData() {
     const fullDay = [];
     const intervals = 24 * 60 / 5;
@@ -195,82 +191,36 @@ function WeatherDashboard() {
     return fullDay;
   }
 
-// Function to process weather prediction data from your specific model
 const processWeatherPredictionData = (rawData) => {
-  // Input rawData is expected to be [[[v1], [v2], ..., [vN]]]
   if (!rawData || !Array.isArray(rawData) || rawData.length === 0 || !Array.isArray(rawData[0])) {
       console.error('Invalid raw weather prediction data format:', rawData);
-      // Return a structure that won't cause errors downstream,
-      // or throw a specific error caught by your catch block
       return []; 
   }
 
-  // Access the inner sequence array (the first element of the outer batch array)
-  const predictionSequence = rawData[0]; // This should be [[v1], [v2], ..., [vN]]
+  
+  const predictionSequence = rawData[0]; 
 
-  // Now, process predictionSequence based on what calculateSolarGeneration expects.
-  // Example 1: If calculateSolarGeneration expects [[v1], [v2], ...]]
-  // In this case, predictionSequence is already in that format!
-  // You might just need to add some structure or metadata per item.
-  // Example: Convert [[v1], ...] to [{ value: v1 }, ...]
   const processed = predictionSequence.map((step, index) => {
       if (Array.isArray(step) && step.length > 0) {
-          // Assuming the prediction for this step is the first element [v1]
+          
           return {
-              id: index + 1, // Add an ID or timestamp if needed
-              predictionValue: step[0], // Extract the actual value v1
-              // Add other properties like interval time if you can derive it
+              id: index + 1,
+              predictionValue: step[0], 
           };
       }
-      // Handle unexpected step format - perhaps return a default or null
       console.warn(`Unexpected step format at index ${index}:`, step);
-      return null; // Or { id: index + 1, predictionValue: 0 }
-  }).filter(item => item !== null); // Remove any null entries
-
-  // Example 2: If calculateSolarGeneration expects [v1, v2, ...] (a 1D array of numbers)
-  /*
-  const processed = predictionSequence.map(step => {
-      if (Array.isArray(step) && step.length > 0) {
-          return step[0]; // Extract the actual value v1
-      }
-      return 0; // Default value for unexpected format
-  });
-  // In this case, the error [i][0] would happen in calculateSolarGeneration
-  // if it tries to access predictions[i][0]. You would need to adjust calculateSolarGeneration
-  // to expect a 1D array and access values directly as predictions[i].
-  */
+      return null;
+  }).filter(item => item !== null); 
 
 
-  // Based on the error, it's likely Example 1 is closer to the structure expected
-  // by calculateSolarGeneration, but the error happens because processWeatherPredictionData
-  // was returning a 1D array [v1, v2, ...] instead of [{ value: v1 }, { value: v2 }, ...]
-  // or [[v1], [v2], ...]]
-
-  // Let's assume calculateSolarGeneration expects an array of objects like { predictionValue: value }
-  // If the error `predictions[i][0] is undefined` is happening *inside*
-  // `calculateSolarGeneration` when it receives the output of `processWeatherPredictionData`,
-  // it means `calculateSolarGeneration` is receiving an array of numbers [v1, v2, ...]
-  // and is trying to access element properties like `predictions[i].predictionValue`
-  // or `predictions[i][0]` expecting `predictions[i]` to be an object or array.
-  // The `[i][0]` syntax strongly suggests it expects an array of arrays like [[v1], [v2], ...]]
-
-   // Let's try returning the [[v1], [v2], ...]] structure directly
-   // as this matches the structure *before* the final singleton list wrap.
-   // This assumes calculateSolarGeneration expects this format.
    const simplifiedProcessed = predictionSequence.map(step => {
         if (Array.isArray(step) && step.length > 0) {
-            return [step[0]]; // Return the single-element array [v1], [v2], etc.
+            return [step[0]];
         }
-        return [0]; // Default to [0] for invalid steps
+        return [0]; 
    });
 
 
-  // If the error persists, it means calculateSolarGeneration needs to be fixed
-  // to handle the actual structure it receives (likely simplifiedProcessed above)
-  // and access values correctly (e.g., processed[i][0]).
-
-  // Return the structure that calculateSolarGeneration expects.
-  // Based on the error, returning [[v1], [v2], ...]] seems most likely to fix the [i][0] access.
   return simplifiedProcessed;
 
 };
@@ -282,94 +232,85 @@ useEffect(() => {
   setIsLoading(true);
   setError(null);
 
-  fetch('http://localhost:8000/results', {
+  fetch('http://localhost:5000/results', {
     method: 'GET',
-    //headers: { 'Content-Type': 'application/json' },
-    //body: JSON.stringify({})
   })
-    // 1️⃣ Primero parseamos la respuesta:
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json();   // devuelve el objeto { model, prediction }
+      return response.json();
     })
-    // 2️⃣ Ahora sí trabajamos con `data.prediction`
     .then(data => {
-      // Verifica si la clave 'predictions' existe y es un objeto
       if (!data || typeof data.predictions !== 'object' || data.predictions === null) {
         console.error('Formato de respuesta inesperado: falta el objeto "predictions".', data);
         throw new Error('Formato de respuesta inesperado del backend.');
       }
 
-      const predictionsObject = data.predictions; // Objeto con timestamps como claves
+      const predictionsObject = data.predictions;
 
-      // Convierte el objeto en un array de objetos, extrayendo datos y añadiendo timeLabel
-      // Ordena por timestamp (clave) para asegurar el orden cronológico
       const processed = Object.keys(predictionsObject)
         .sort() // Ordena las claves (timestamps) alfabéticamente/cronológicamente
         .map(timestamp => {
-          const values = predictionsObject[timestamp]; // Objeto con { air_temp, ghi, ... }
+          const values = predictionsObject[timestamp];
           
-          // Extrae la hora y minuto del timestamp para 'timeLabel'
-          // Puedes ajustar el formato si lo necesitas
           let timeLabel = '00:00'; 
           try {
-            const dateObj = new Date(timestamp); // Intenta parsear el timestamp
-            if (!isNaN(dateObj)) { // Verifica si el parseo fue exitoso
+            const dateObj = new Date(timestamp);
+            if (!isNaN(dateObj)) {
               const hours = String(dateObj.getUTCHours()).padStart(2, '0');
               const minutes = String(dateObj.getUTCMinutes()).padStart(2, '0');
               timeLabel = `${hours}:${minutes}`;
             } else {
-                console.warn(`No se pudo parsear el timestamp: ${timestamp}`);
-                // Intenta extraer HH:MM si el formato es como 'YYYY-MM-DD HH:MM:SS'
-                const timeMatch = timestamp.match(/\d{2}:\d{2}/);
-                if (timeMatch) timeLabel = timeMatch[0];
+              console.warn(`No se pudo parsear el timestamp: ${timestamp} como Date. Intentando extraer HH:MM.`);
+              const timeMatch = timestamp.match(/\d{2}:\d{2}/); // Busca un patrón HH:MM
+              if (timeMatch && timeMatch[0]) {
+                 timeLabel = timeMatch[0];
+              } else {
+                 console.warn(`No se pudo extraer HH:MM del timestamp: ${timestamp}`);
+              }
             }
           } catch (e) {
-             console.warn(`Error parseando timestamp ${timestamp}: ${e}`);
+            console.warn(`Error parseando timestamp ${timestamp}: ${e}`);
           }
 
-          // Construye el objeto para este intervalo
           const intervalData = { timeLabel };
-          targetVars.forEach(key => {
-            // Asigna el valor o un default si falta (ej. 0 o null)
-            intervalData[key] = values.hasOwnProperty(key) ? values[key] : 0; 
+          const allPossibleVars = [...targetVars, 'solarPower', 'powerFactor']; 
+
+          allPossibleVars.forEach(key => {
+            if (values.hasOwnProperty(key) && values[key] !== null && values[key] !== undefined) {
+              intervalData[key] = values[key];
+            } else if (targetVars.includes(key)) {
+              intervalData[key] = 0;
+            }
           });
 
           return intervalData;
         });
 
-      // Verifica cuántos puntos se procesaron
-      console.log(`Se procesaron ${processed.length} intervalos desde el backend.`);
+      console.log(`Se procesaron ${processed.length} intervalos desde el backend para fullDayData.`);
 
-      // 4) actualizamos tu estado
       if (processed.length > 0) {
-         setFullDayData(processed);
-         setStartInterval(1); // Reinicia al inicio
-         setEndInterval(processed.length); // ¡¡ESTO DEBERÍA SER 288 AHORA!!
-         // Deja que el segundo useEffect maneje el filtrado inicial para predictionData
-         // setPredictionData(processed); // Opcional: podrías mostrar todo inicialmente
+        setFullDayData(processed);
+        setStartInterval(1); // Reinicia al inicio
+        setEndInterval(Math.min(processed.length, 288)); 
       } else {
-         // Si no se procesó nada, quizás usar el fallback
-         console.warn("No se procesaron datos válidos, usando fallback.");
-         const fallbackData = generateFullDayData(); // Usa tus datos simulados
-         setFullDayData(fallbackData);
-         setStartInterval(1);
-         setEndInterval(fallbackData.length); 
-         // setPredictionData(calculateSolarGeneration(fallbackData));
+        console.warn("No se procesaron datos válidos desde el backend, intentando usar fallback de datos simulados.");
+        const fallbackData = generateFullDayData();
+        setFullDayData(fallbackData);
+        setStartInterval(1);
+        setEndInterval(fallbackData.length); 
       }
     })
     .catch(err => {
-      console.error('Error al obtener predicción meteorológica:', err);
+      console.error('Error al obtener predicción meteorológica del backend:', err);
       setError(err.message);
 
-      // fallback sintético
+      console.warn("Usando fallback de datos simulados debido a error en fetch.");
       const fallbackData = generateFullDayData();
       setFullDayData(fallbackData);
       setStartInterval(1);
       setEndInterval(fallbackData.length);
-      setPredictionData(calculateSolarGeneration(fallbackData));
     })
     .finally(() => {
       setIsLoading(false);
@@ -378,33 +319,55 @@ useEffect(() => {
 
 
 
-  // Efecto para filtrar datos y recalcular generación cuando cambia el rango o los parámetros
-  useEffect(() => {
-    if (fullDayData.length > 0) {
-      // Asegurarse que los intervalos son válidos
-      const validStart = Math.max(1, Math.min(startInterval, fullDayData.length));
-      const validEnd = Math.max(validStart, Math.min(endInterval, fullDayData.length));
 
-      const filtered = fullDayData.slice(validStart - 1, validEnd);
-      const dataWithGeneration = calculateSolarGeneration(filtered); // Calculamos generación al filtrar
-      setPredictionData(dataWithGeneration); // Actualizamos los datos a mostrar
-    }
-  }, [startInterval, endInterval, fullDayData, solarSystemParams]); // Dependencias
+    useEffect(() => {
+        if (fullDayData.length > 0) {
+            const validStart = Math.max(1, Math.min(startInterval, fullDayData.length));
+            const validEnd = Math.max(validStart, Math.min(endInterval, fullDayData.length));
+            const filteredData = fullDayData.slice(validStart - 1, validEnd);
 
-  // --- Cálculos Derivados (useMemo) ---
+            if (filteredData.length === 0) {
+                setPredictionData([]);
+                return;
+            }
 
-  // Para el gráfico, se usa "timeLabel" en el eje X y se añade el índice real
+            if (filteredData[0].hasOwnProperty('solarPower') && filteredData[0].solarPower !== undefined) {
+                console.log("Usando solarPower proporcionado por el backend.");
+                const dataConPowerFactor = filteredData.map(item => {
+                    let powerFactor = item.powerFactor;
+                    if ((!item.hasOwnProperty('powerFactor') || item.powerFactor === undefined) &&
+                        item.solarPower !== undefined && solarSystemParams.capacity > 0) {
+                        powerFactor = parseFloat((item.solarPower / solarSystemParams.capacity * 100).toFixed(1));
+                    } else if (item.powerFactor === undefined) { // Si no se pudo calcular (ej. capacity es 0)
+                        powerFactor = 0;
+                    }
+                    return {
+                        ...item,
+                        powerFactor: powerFactor 
+                    };
+                });
+                setPredictionData(dataConPowerFactor);
+            } else {
+                console.warn("solarPower no detectado del backend o es undefined. Usando calculateSolarGeneration local.");
+                const dataWithLocalGeneration = calculateSolarGeneration(filteredData);
+                setPredictionData(dataWithLocalGeneration);
+            }
+        } else {
+            setPredictionData([]);
+        }
+    }, [startInterval, endInterval, fullDayData, solarSystemParams]);
+
+
   const chartData = useMemo(() => predictionData.map((item, index) => ({
-    interval: index + startInterval, // el intervalo real en el día completo
+    interval: index + startInterval, 
     ...item
   })), [predictionData, startInterval]);
 
-  // Calcular estadísticas de generación
   const generationStats = useMemo(() => {
     if (!predictionData || predictionData.length === 0 || !predictionData[0]?.hasOwnProperty('solarPower')) {
       return { totalEnergy: 0, peakPower: 0, averagePower: 0, capacityFactor: 0 };
     }
-    const intervalHours = 5 / 60; // 5 minutos = 1/12 hora
+    const intervalHours = 5 / 60; 
     const totalEnergy = predictionData.reduce((sum, item) => sum + (item.solarPower * intervalHours), 0);
     const peakPower = Math.max(...predictionData.map(item => item.solarPower));
     const averagePower = predictionData.reduce((sum, item) => sum + item.solarPower, 0) / predictionData.length;
@@ -489,7 +452,7 @@ useEffect(() => {
     const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8' });
     saveAs(blob, filename);
   
-  }, [activeTab, chartData, startInterval, endInterval, targetVars, varLabels]); // Dependencias de useCallback
+  }, [activeTab, chartData, startInterval, endInterval, targetVars, varLabels]); 
 
   const TabNavigation = () => (
     <div className="tab-navigation">
@@ -609,7 +572,7 @@ useEffect(() => {
       );
     }
 
-    // Contenido de la pestaña generación
+
     else if (activeTab === 'generation') {
       return (
         <>
@@ -621,10 +584,9 @@ useEffect(() => {
             <p>Basado en las condiciones meteorológicas y los parámetros del sistema</p>
           </div>
 
-          {/* --- Sección de Resumen Destacado --- */}
-        {/* PEGA EL CÓDIGO DEL RESUMEN AQUÍ */}
+
         <div className="summary-section" style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', marginBottom: '20px', padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '8px' }}>
-          {/* ... (contenido de las tarjetas de resumen como se mostró arriba) ... */}
+          
           <div className="stat-card" style={{ textAlign: 'center', padding: '10px', minWidth: '150px', margin: '5px' }}>
             <div className="stat-value" style={{ fontSize: '1.8em', fontWeight: 'bold', color: '#f9a825' }}>
               {generationStats.totalEnergy} kWh
@@ -641,7 +603,6 @@ useEffect(() => {
             </div>
             <div className="stat-label" style={{ fontSize: '0.9em', color: '#555' }}>
               Potencia Pico
-              {/* Calculamos la hora del pico aquí */}
               {(() => {
                  if (!predictionData || predictionData.length === 0 || generationStats.peakPower <= 0) return null;
                  const peakItem = predictionData.find(item => item.solarPower === generationStats.peakPower);
@@ -663,7 +624,7 @@ useEffect(() => {
         </div>
         {/* --- Fin Sección de Resumen Destacado --- */}
 
-         
+        
 
           {/* Gráfica de generación */}
           <div className="charts-section">
@@ -688,6 +649,52 @@ useEffect(() => {
               ) : <p>No se calcularon datos de generación.</p>}
             </div>
           </div>
+
+          {/* --- INICIO DE LA NUEVA SECCIÓN CON GRÁFICOS DEL MODELO AVANZADO --- */}
+          <div className="charts-section">
+            <div className="chart-container">
+              <h3>
+                Potencia (Modelo Avanzado) y Temperatura Aire
+                <InfoTooltip text="Potencia solar estimada (kW) con el modelo de simulación avanzado, y su relación con la temperatura del aire (°C)." />
+              </h3>
+              {(predictionData.length > 0 && predictionData[0]?.hasOwnProperty('solarPower') && predictionData[0]?.hasOwnProperty('air_temp')) ? (
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={chartData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="timeLabel" fontSize={12}/>
+                    <YAxis yAxisId="leftPower" name="Potencia" unit="kW" stroke="#2ca02c" label={{ value: 'Potencia (kW)', angle: -90, position: 'insideLeft', offset:10 }} fontSize={12}/>
+                    <YAxis yAxisId="rightTemp" name="Temperatura" unit="°C" orientation="right" stroke="#d62728" label={{ value: 'Temp. Aire (°C)', angle: 90, position: 'insideRight', offset:10 }} fontSize={12}/>
+                    <Tooltip />
+                    <Legend />
+                    <Line yAxisId="leftPower" type="monotone" dataKey="solarPower" stroke="#2ca02c" name="Potencia Estimada (Modelo Avanzado)" dot={false} />
+                    <Line yAxisId="rightTemp" type="monotone" dataKey="air_temp" stroke="#d62728" name="Temperatura Aire" dot={false}/>
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : <p>No hay datos suficientes para el gráfico de Potencia vs Temperatura.</p>}
+            </div>
+
+            <div className="chart-container">
+              <h3>
+                Potencia (Modelo Avanzado) y Velocidad Viento
+                <InfoTooltip text="Potencia solar estimada (kW) con el modelo de simulación avanzado, y su relación con la velocidad del viento (m/s)." />
+              </h3>
+              {(predictionData.length > 0 && predictionData[0]?.hasOwnProperty('solarPower') && predictionData[0]?.hasOwnProperty('wind_speed_10m')) ? (
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart data={chartData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="timeLabel" fontSize={12}/>
+                    <YAxis yAxisId="leftPower" name="Potencia" unit="kW" stroke="#2ca02c" label={{ value: 'Potencia (kW)', angle: -90, position: 'insideLeft', offset:10 }} fontSize={12}/>
+                    <YAxis yAxisId="rightWind" name="Viento" unit="m/s" orientation="right" stroke="#1f77b4" label={{ value: 'Viento (m/s)', angle: 90, position: 'insideRight', offset:10 }} fontSize={12}/>
+                    <Tooltip />
+                    <Legend />
+                    <Line yAxisId="leftPower" type="monotone" dataKey="solarPower" stroke="#2ca02c" name="Potencia Estimada (Modelo Avanzado)" dot={false} />
+                    <Line yAxisId="rightWind" type="monotone" dataKey="wind_speed_10m" stroke="#1f77b4" name="Velocidad Viento" dot={false}/>
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : <p>No hay datos suficientes para el gráfico de Potencia vs Viento.</p>}
+            </div>
+          </div>
+          {/* --- FIN DE LA NUEVA SECCIÓN --- */}
 
           {/* Factores que afectan la generación */}
           <div className="charts-section">
@@ -776,7 +783,6 @@ useEffect(() => {
     }
   };
 
-  // JSX principal del componente
   return (
       <div className="weather-dashboard">
       <div className="dashboard-header">
@@ -784,10 +790,8 @@ useEffect(() => {
         <p>Predicción de variables y estimación de generación fotovoltaica</p>
       </div>
 
-      {/* Navegación por Pestañas */}
       <TabNavigation />
 
-      {/* Controles para seleccionar intervalos */}
       <div className="controls">
         
         <label htmlFor="startIntervalInput">Intervalo inicio:</label>
@@ -795,9 +799,9 @@ useEffect(() => {
           id="startIntervalInput"
           type="number"
           min="1"
-          max={288} // Evita max=0 si fullDayData está vacío
+          max={288}
           value={startInterval}
-          onChange={(e) => setStartInterval(Math.min(288, Math.max(0, parseInt(e.target.value,10) || 0)))} // Asegura que sea al menos 1
+          onChange={(e) => setStartInterval(Math.min(288, Math.max(0, parseInt(e.target.value,10) || 0)))} 
           aria-label="Intervalo de inicio"
         />
         <label htmlFor="endIntervalInput">Intervalo fin:</label>
@@ -821,7 +825,7 @@ useEffect(() => {
         style={{ padding: '8px 15px', cursor: 'pointer', marginLeft: 'auto' }} 
         aria-label="Exportar datos a Excel"
       >
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style={{ marginRight: '5px', verticalAlign: 'middle' }}>
+         <svg xmlns="http:.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style={{ marginRight: '5px', verticalAlign: 'middle' }}>
             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
             <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
          </svg>

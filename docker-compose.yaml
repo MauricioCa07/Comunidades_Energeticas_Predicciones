@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./proyecto_frontend
+    container_name: frontend-container
+    ports:
+      - "5173:5173"
+    volumes:
+        - ./proyecto_frontend:/app
+        - /app/node_modules
+    networks:
+      - backend
+    command: npm run dev
+
+  backend:
+    build:
+      context: ./proyecto_backend
+    container_name: backend-container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./proyecto_backend:/app
+    networks:
+      - backend
+
+networks:
+  backend:
