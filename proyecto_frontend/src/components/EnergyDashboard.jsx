@@ -20,7 +20,7 @@ function EnergyDashboard() {
       setIsLoading(true);
       try {
         const randomConsumption = Array.from({ length: 48 }, () =>
-          Math.random() * 10 + 30
+          Math.random() + 0,3
         );
         setActualConsumption(randomConsumption);
 
@@ -45,15 +45,12 @@ function EnergyDashboard() {
             setPredictionData(data.prediction);
         } else {
              console.warn("Prediction data not found or not in expected format:", data);
-             setPredictionData(Array(48).fill(35));
+             setPredictionData(Array(48));
         }
 
       } catch (error) {
         console.error('Error fetching prediction:', error);
-        setPredictionData(Array(48).fill(35));
-        if (actualConsumption.length === 0) {
-            setActualConsumption(Array.from({ length: 48 }, () => Math.random() * 10 + 30));
-        }
+        setPredictionData(Array(48));
       } finally {
         setIsLoading(false);
       }
@@ -226,7 +223,7 @@ function EnergyDashboard() {
         return <p>No hay datos disponibles para mostrar.</p>;
     }
 
-    switch(activeTab) {
+    switch(activeTab) { 
       case 'overview':
         return (
           <>

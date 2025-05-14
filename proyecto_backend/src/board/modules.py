@@ -16,7 +16,7 @@ except Exception as e:
     WEATHER_MODEL = None
 
 try:
-    COM_MODEL = load_model("COM-2.0.keras")
+    COM_MODEL = load_model("COM-3.0.keras")
 except Exception as e:
     print(f"Error loading COM model: {e}")
     COM_MODEL = None

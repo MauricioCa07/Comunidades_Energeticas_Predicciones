@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, r2_score
 
 
-model_to_use = "COM-2.0.keras"
-df_position = "/home/laptop1/Desktop/codes/proyecto_p2/models_media/processed_datasets/"
-result = "/home/laptop1/Desktop/codes/proyecto_p2/models_media/results/results.txt"
+model_to_use = "COM-3.0.keras"
+df_position = "models_media/processed_datasets/COM/"
+result = "models_media/results/results.txt"
 
-model_path = "/home/laptop1/Desktop/codes/proyecto_p2/" + model_to_use
+model_path =  model_to_use
 
 # Cargar los datos de prueba
 x = np.load(df_position + "x_test.npy")

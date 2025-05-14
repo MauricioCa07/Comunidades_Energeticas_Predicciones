@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np 
 
 
-#change this for your path
-df_path = "proyecto_p2/models_media/datasets/BANES Energy Data Electricity.csv"
-df_result = "proyecto_p2/models_media/processed_datasets/"
+
+df_path = "models_media/datasets/BANES Energy Data Electricity.csv"
+df_result = "models_media/processed_datasets/COM/"
 
 
 #here i'm oppening the csv with the ; separator
