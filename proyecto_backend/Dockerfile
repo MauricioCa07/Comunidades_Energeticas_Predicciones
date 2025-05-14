@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expone el puerto 8000 para Flask
 EXPOSE 5000
 
-ENV COM_MODEL=COM-2.0.keras
+ENV COM_MODEL=COM-3.0.keras
 
 # Comando para correr la app
 CMD ["python", "-m", "flask","--app", "src/board", "run","--host=0.0.0.0","--debug"]

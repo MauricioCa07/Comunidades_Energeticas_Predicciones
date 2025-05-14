@@ -20,7 +20,7 @@ function EnergyDashboard() {
       setIsLoading(true);
       try {
         const randomConsumption = Array.from({ length: 48 }, () =>
-          Math.random() + 0,3
+          Math.random()/3
         );
         setActualConsumption(randomConsumption);
 
