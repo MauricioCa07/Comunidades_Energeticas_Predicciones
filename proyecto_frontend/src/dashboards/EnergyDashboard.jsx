@@ -26,7 +26,7 @@ function EnergyDashboard() {
 
         const dummyInputs = randomConsumption.slice(0, 47);
 
-        const response = await fetch('http://localhost:5000/predict/com', {
+        const response = await fetch('http://54.234.57.47:5000/predict/com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
