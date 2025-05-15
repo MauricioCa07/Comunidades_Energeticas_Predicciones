@@ -232,7 +232,7 @@ useEffect(() => {
   setIsLoading(true);
   setError(null);
 
-  fetch('http://localhost:5000/results', {
+  fetch('http://54.234.57.47:5000/results', {
     method: 'GET',
   })
     .then(response => {
