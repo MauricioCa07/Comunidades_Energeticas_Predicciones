@@ -58,21 +58,21 @@ const Home = memo(() => (
         <Card
           to="/weather"
           icon={SunIcon}
-          title="Clima"
-          description="Predicciones meteorológicas"
+          title="Predicciones meteorológicas"
+          description="Predicciones de las condiciones climaticas en tu zona"
         />
         <Card
           to="/consumption"
           icon={LightningBoltIcon}
-          title="Energía"
-          description="Consumo y predicciones energéticas"
+          title="Predicciones de consumo"
+          description="Predicciones de tu consumo energetico"
         />
 
         <Card
           to="/manual"
           icon={BookOpenIcon}
           title="Manual de usuario"
-          description="Manual para cada una de las cosas"
+          description="Manual para cada una de los diferentes apartados"
         />
       </div>
       
