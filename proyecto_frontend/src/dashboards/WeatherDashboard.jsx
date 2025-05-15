@@ -220,7 +220,7 @@ useEffect(() => {
   setIsLoading(true);
   setError(null);
 
-  fetch('http://54.234.57.47:5000/results', {
+  fetch('http://34.194.166.43:5000/results', {
     method: 'GET',
   })
     .then(response => {
