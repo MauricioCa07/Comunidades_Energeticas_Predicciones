@@ -1,22 +1,10 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  AreaChart,
-  Area,
-  ResponsiveContainer
-} from 'recharts';
+import {LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,Legend,Area,ResponsiveContainer} from 'recharts';
 import './WeatherDashboard.css'; 
-import InfoTooltip from './InfoTooltip'; 
-import { Link } from 'react-router-dom'; 
+import InfoTooltip from '../utilities/InfoTooltip';  
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
-import { BarChart2, Home, Battery } from 'lucide-react';
+import BottomNav from '../utilities/BottomNav.jsx';
 
 function WeatherDashboard() {
   const [fullDayData, setFullDayData] = useState([]); 
@@ -232,7 +220,7 @@ useEffect(() => {
   setIsLoading(true);
   setError(null);
 
-  fetch('http://54.234.57.47:5000/results', {
+  fetch('http://localhost:5000/results', {
     method: 'GET',
   })
     .then(response => {
@@ -839,18 +827,7 @@ useEffect(() => {
       </div>
 
       <div className="bottom-nav">
-        <Link to="/" className="nav-item active">
-          <Home size={24} />
-          <span>Home</span>
-        </Link>
-        <Link to="/consumption" className="nav-item">
-          <BarChart2 size={24} />
-          <span>Consumo</span>
-        </Link>
-        <Link to="/weather" className="nav-item">
-          <Battery size={24} />
-          <span>Producción</span>
-        </Link>
+            <BottomNav active={location.pathname}></BottomNav>
       </div>
 
     </div>

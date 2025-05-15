@@ -1,11 +1,11 @@
 import React, { useEffect, useState,useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import './EnergyDashboard.css';
-import InfoTooltip from './InfoTooltip.jsx';
+import InfoTooltip from '../utilities/InfoTooltip.jsx';
+import BottomNav from '../utilities/BottomNav.jsx';
 import {XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
-import { BarChart2, Home, Battery } from 'lucide-react';
 import * as XLSX from 'xlsx'; 
 import { saveAs } from 'file-saver';
+
 
 function EnergyDashboard() {
   const [predictionData, setPredictionData] = useState([]);
@@ -26,7 +26,7 @@ function EnergyDashboard() {
 
         const dummyInputs = randomConsumption.slice(0, 47);
 
-        const response = await fetch('http://54.234.57.47:5000/predict/com', {
+        const response = await fetch('http://localhost:5000/predict/com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -192,8 +192,8 @@ function EnergyDashboard() {
   const getComparisonClass = (value) => {
     const numericValue = parseFloat(value);
     if (isNaN(numericValue)) return "neutral";
-    if (numericValue > 5) return "positive";
-    if (numericValue < -5) return "negative";
+    if (numericValue > 0) return "positive";
+    if (numericValue < -0) return "negative";
     return "neutral";
   };
 
@@ -431,26 +431,28 @@ function EnergyDashboard() {
                 <InfoTooltip text="Comparación del consumo total real simulado y predicho durante las últimas 24 horas, indicando la diferencia global y el porcentaje de acierto." />
               </h3>
               <div className="efficiency-summary">
-                <div className="efficiency-metric">
-                  <span className="metric-label" style={{ color: '#FFFFFF' }}>Consumo Total Real</span>
-                  <span className="metric-value">{totalConsumption.toFixed(2)} kWh</span>
-                </div>
-                <div className="efficiency-metric">
-                  <span className="metric-label" style={{ color: '#FFFFFF' }}>Consumo Total Predicho</span>
-                  <span className="metric-value">{totalPrediction.toFixed(2)} kWh</span>
-                </div>
-                <div className="efficiency-metric">
-                  <span className="metric-label" style={{ color: '#FFFFFF' }}>Diferencia Total</span>
-                  <span className={`metric-value ${getComparisonClass(totalPrediction - totalConsumption)}`}>
-                    {(totalPrediction - totalConsumption).toFixed(2)} kWh
-                  </span>
-                </div>
-                 <div className="efficiency-metric">
-                  <span className="metric-label" style={{ color: '#FFFFFF' }}>Acierto Global</span>
-                  <span className={`metric-value ${getComparisonClass(efficiency)}`}>
-                    {efficiency}%
-                  </span>
-                </div>
+              <div className="efficiency-summary">
+  <div className="efficiency-metric">
+    <span className="metric-label" style={{ color: '#000000' }}>Consumo Total Real</span>
+    <span className="metric-value metric-value-black">{totalConsumption.toFixed(2)} kWh</span>
+  </div>
+  <div className="efficiency-metric">
+    <span className="metric-label" style={{ color: '#000000' }}>Consumo Total Predicho</span>
+    <span className="metric-value metric-value-black">{totalPrediction.toFixed(2)} kWh</span>
+  </div>
+  <div className="efficiency-metric">
+    <span className="metric-label" style={{ color: '#000000' }}>Diferencia Total</span>
+    <span className={`metric-value ${getComparisonClass(totalPrediction - totalConsumption)}`}>
+      {(totalPrediction - totalConsumption).toFixed(2)} kWh
+    </span>
+  </div>
+  <div className="efficiency-metric">
+    <span className="metric-label" style={{ color: '#000000' }}>Acierto Global</span>
+    <span className={`metric-value ${getComparisonClass(efficiency)}`}>
+      {efficiency}%
+    </span>
+  </div>
+</div>
               </div>
             </div>
           </>
@@ -463,12 +465,6 @@ function EnergyDashboard() {
 
   return (
     <div className="energy-dashboard">
-      <div className="header-circles">
-        <div className="circle circle-1"></div>
-        <div className="circle circle-2"></div>
-        <div className="circle circle-3"></div>
-        <div className="circle circle-4"></div>
-      </div>
 
       <div className="dashboard-content">
         {isLoading ? (
@@ -532,18 +528,7 @@ function EnergyDashboard() {
 
 
       <div className="bottom-nav">
-        <Link to="/" className="nav-item active">
-          <Home size={24} />
-          <span>Home</span>
-        </Link>
-        <Link to="/consumption" className="nav-item">
-          <BarChart2 size={24} />
-          <span>Consumo</span>
-        </Link>
-        <Link to="/weather" className="nav-item">
-          <Battery size={24} />
-          <span>Producción</span>
-        </Link>
+        <BottomNav active={location.pathname}></BottomNav>
       </div>
     </div>
   );
