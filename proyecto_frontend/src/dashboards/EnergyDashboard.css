@@ -1,18 +1,16 @@
-/* EnergyDashboard.css - Estilo basado en las imágenes proporcionadas */
-
 .energy-dashboard {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9fcf9;
+    background-color: #ecfbec;
     color: #333;
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
   }
   
-  /* CÍRCULOS DECORATIVOS */
+  
   .header-circles {
     position: absolute;
     top: 0;
@@ -64,7 +62,7 @@
     opacity: 0.8;
   }
   
-  /* PESTAÑAS DE CONSUMO/PRODUCCIÓN */
+  
   .section-tabs {
     display: flex;
     margin: 100px auto 30px;
@@ -94,16 +92,16 @@
     color: #2f624a;
   }
   
-  /* CONTENIDO PRINCIPAL */
+  
   .dashboard-content {
     background-color: white;
     border-radius: 24px;
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    margin-bottom: 80px; /* Espacio para la barra de navegación */
+    margin-bottom: 80px; 
   }
   
-  /* PESTAÑAS DE NAVEGACIÓN */
+  
   .nav-tabs {
     display: flex;
     gap: 12px;
@@ -130,7 +128,7 @@
     background-color: #e2f7e9;
   }
   
-  /* ESTADÍSTICAS */
+  
   .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -162,7 +160,7 @@
     color: #333;
   }
   
-  /* GRÁFICOS */
+  
   .chart-container {
     margin-bottom: 30px;
     background-color: white;
@@ -180,7 +178,7 @@
     gap: 8px;
   }
   
-  /* TABLAS */
+  
   .info-section {
     margin-bottom: 30px;
     background-color: white;
@@ -200,7 +198,7 @@
   
   .info-section.highlight {
     background-color: #27AE60;
-    color: white;
+    color: rgb(55, 55, 55);
   }
   
   .prediction-table-container {
@@ -229,7 +227,7 @@
     background-color: #f9f9f9;
   }
   
-  /* CLASES DE EFICIENCIA */
+  
   .positive {
     color: #27AE60;
   }
@@ -242,7 +240,7 @@
     color: #4F4F4F;
   }
   
-  /* TOOLTIP PERSONALIZADO */
+  
   .custom-tooltip {
     background-color: white;
     border-radius: 8px;
@@ -256,7 +254,7 @@
     margin-bottom: 8px;
   }
   
-  /* BLOQUES HORARIOS */
+  
   .time-blocks-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -294,7 +292,7 @@
   }
   
   .metric-value {
-    font-weight: 600;
+    font-weight: 600 !important;;
   }
   
   .time-block-diff {
@@ -304,7 +302,7 @@
     font-size: 16px;
   }
   
-  /* RESUMEN DE EFICIENCIA */
+  
   .efficiency-summary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -327,7 +325,7 @@
     font-weight: 700;
   }
   
-  /* INDICADOR DE CARGA */
+  
   .loading-container {
     display: flex;
     flex-direction: column;
@@ -350,7 +348,7 @@
     to { transform: rotate(360deg); }
   }
   
-  /* BARRA DE NAVEGACIÓN INFERIOR */
+  
   .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -383,7 +381,7 @@
     margin-top: 4px;
   }
   
-  /* RESPONSIVE */
+  
   @media (max-width: 768px) {
     .section-tabs {
       max-width: 95%;
