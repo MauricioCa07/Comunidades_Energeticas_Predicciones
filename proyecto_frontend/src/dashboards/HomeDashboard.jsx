@@ -56,7 +56,7 @@ const Home = memo(() => (
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-16">
         <Card
-          to="/weather"
+          to="/results"
           icon={SunIcon}
           title="Predicciones meteorológicas"
           description="Predicciones de las condiciones climaticas en tu zona"

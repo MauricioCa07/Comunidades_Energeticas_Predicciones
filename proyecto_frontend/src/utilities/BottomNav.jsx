@@ -5,7 +5,7 @@ import { BatteryCharging, Home, BatteryLow } from "lucide-react";
 const items = [
   { icon: Home, label: "Inicio", to: "/" },
   { icon: BatteryLow, label: "Consumo", to: "/consumption" },
-  { icon: BatteryCharging, label: "Generación", to: "/weather" },
+  { icon: BatteryCharging, label: "Generación", to: "/results" },
 ];
 
 export default function BottomNav({ active }) {
